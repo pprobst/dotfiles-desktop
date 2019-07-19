@@ -1,0 +1,26 @@
+#!/bin/sh
+
+cp -r  ~/.ncmpcpp/ /home/probst/Repos/dotfiles-desktop
+cp -r  ~/Scripts/ /home/probst/Repos/dotfiles-desktop
+cp ~/.Xresources /home/probst/Repos/dotfiles-desktop
+cp ~/.bashrc /home/probst/Repos/dotfiles-desktop
+cp ~/.bash_profile /home/probst/Repos/dotfiles-desktop
+cp ~/.vimrc /home/probst/Repos/dotfiles-desktop
+cp ~/.xinitrc /home/probst/Repos/dotfiles-desktop
+cp ~/.tmux.conf /home/probst/Repos/dotfiles-desktop
+cp ~/.xmonad/xmonad.hs /home/probst/Repos/dotfiles-desktop/.xmonad
+cp ~/.xmonad/xmobar.hs /home/probst/Repos/dotfiles-desktop/.xmonad
+cp ~/.xmonad/how-to-install.txt /home/probst/Repos/dotfiles-desktop/.xmonad
+cp -r ~/.config/compton /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/dunst /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/htop /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/mpd/mpd.conf /home/probst/Repos/dotfiles-desktop/.config/mpd
+cp -r ~/.config/mpv /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/neofetch /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/pcmanfm/default /home/probst/Repos/dotfiles-desktop/.config/pcmanfm
+cp -r ~/.config/ranger /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/zathura /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/vifm /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/fish /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.config/nvim /home/probst/Repos/dotfiles-desktop/.config
+cp -r ~/.fonts/ /home/probst/Repos/dotfiles-desktop/

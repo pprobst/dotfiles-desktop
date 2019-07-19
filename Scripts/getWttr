@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Displays current weather for current location.
+# See https://wttr.in/:help for options.
+
+notify-send "$(curl wttr.in/?0?T?Q)"

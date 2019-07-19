@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Screenshot whole screen
+maim --hidecursor ~/Images/Screenshots/desktop/"Screenshot $(date +"%Y-%m-%d") at $(date +"%H.%M".%S)".png
+notify-send -t 3000 "*SNAP*" -i "/home/probst/Images/Imageboards/2D/*snap*.jpg"
+

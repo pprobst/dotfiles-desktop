@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Gets fortune cookie.
+
+notify-send -t 0 "$(fortune -s)"

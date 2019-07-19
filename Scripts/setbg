@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Sets the background wallpaper (fill)
+[ ! -z "$1" ] && cp "$1" ~/Images/Wallpapers/current-desktop.png && notify-send -i "$HOME/Images/Wallpapers/current-desktop.png" "Wallpaper changed."
+feh --bg-fill ~/Images/Wallpapers/current-desktop.png

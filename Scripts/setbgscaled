@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Sets the background wallpaper (tiled)
+[ ! -z "$1" ] && cp "$1" ~/Images/Wallpapers/current-desktop.png && notify-send -i "$HOME/Images/Wallpapers/current-desktop.png" "Wallpaper changed."
+feh --bg-scale ~/Images/Wallpapers/current-desktop.png

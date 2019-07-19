@@ -1,0 +1,32 @@
+# Font
+set font "Iosevka 10"
+
+# Copy text to clipboard
+set selection-clipboard clipboard
+
+# Colors
+#set statusbar-bg           "#1F1F1F"
+set statusbar-bg            "#18191A"
+set statusbar-fg            "#C2C5C6"
+#set statusbar-fg            "#FFF7E9"
+set completion-bg           "#181b23"
+set completion-fg           "#bdbdbd"
+set completion-highlight-bg "#181b23"
+set completion-highlight-fg "#78a4ff"
+set inputbar-bg             "#1F1F1F"
+set inputbar-fg             "#FFF7E9"
+set notification-error-bg   "#181b23"
+set notification-error-fg   "#d48381"
+set notification-warning-bg "#181b23"
+set notification-warning-fg "#f9cc8f"
+#set recolor-darkcolor      "#1F1F1F"
+set recolor-darkcolor       "#C2C5C6"
+# set recolor-lightcolor    "#FFF7E9"
+set recolor-lightcolor      "#18191A"
+
+# Mapping
+map = zoom in
+map - zoom out
+map + zoom 100%
+map i set recolor
+

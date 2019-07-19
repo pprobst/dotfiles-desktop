@@ -1,0 +1,22 @@
+#!/bin/bash
+
+icon=" "
+
+pgrep -x redshift &> /dev/null
+if [[ $? -eq 0 ]]; then
+    temp=$(redshift -p 2>/dev/null | grep temp | cut -d' ' -f3)
+    temp=${temp//K/}
+fi
+
+# OPTIONAL: Append ' ${temp}K' after $icon
+if [[ -z $temp ]]; then
+    #echo "%{F#65737E}$icon"       # Greyed out (not running)
+    echo "<fc=#A89984>$icon</fc>"
+elif [[ $temp -ge 5000 ]]; then
+    #echo "%{F#8FA1B3}$icon"       # Blue
+    echo "<fc=#988B94>$icon</fc>"
+elif [[ $temp -ge 4500 ]]; then
+    echo "<fc=#906163>$icon</fc>"       # Orange
+else
+    echo "<fc=#AB4247>$icon</fc>"       # Red
+fi
