@@ -11,6 +11,7 @@ cp ~/.tmux.conf /home/probst/Repos/dotfiles-desktop
 cp ~/.xmonad/xmonad.hs /home/probst/Repos/dotfiles-desktop/.xmonad
 cp ~/.xmonad/xmobar.hs /home/probst/Repos/dotfiles-desktop/.xmonad
 cp ~/.xmonad/how-to-install.txt /home/probst/Repos/dotfiles-desktop/.xmonad
+cp ~/.pqivrc /home/probst/Repos/dotfiles-desktop
 cp -r ~/.config/compton /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/dunst /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/htop /home/probst/Repos/dotfiles-desktop/.config
