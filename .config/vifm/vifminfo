@@ -14,7 +14,7 @@
 
 # TUI:
 al
-q1
+q0
 v2
 ov
 m-1
@@ -22,162 +22,6 @@ l-2
 r-11,2
 
 # Left window history (oldest to newest):
-d/home/probst/Documents/CC/3_semestre/Paradigmas/Exercícios/Prolog
-	prolog1
-2
-d/home/probst/Documents/CC/3_semestre/Paradigmas/Exercícios
-	Prolog
-5
-d/home/probst/Documents/CC/3_semestre/Paradigmas
-	Exercícios
-7
-d/home/probst/Documents/CC/3_semestre
-	Paradigmas
-5
-d/home/probst/Documents/CC
-	3_semestre
-5
-d/home/probst/Documents
-	Oneshot
-3
-d/home/probst
-	Documents
-9
-d/home/probst/Documents
-	CC
-2
-d/home/probst/Documents/CC
-	5_semestre
-3
-d/home/probst/Documents/CC/5_semestre
-	Log_Predicado
-2
-d/home/probst/Documents/CC
-	5_semestre
-3
-d/home/probst/Documents
-	CC
-2
-d/home/probst
-	Images
-11
-d/home/probst/Images
-	変態
-12
-d/home/probst/Images/変態
-	Series
-1
-d/home/probst/Images/変態/Series
-	..
-0
-d/home/probst/Images/変態
-	:3
-2
-d/home/probst/Images/変態/:3
-	tomboys & short hair
-1
-d/home/probst/Images/変態/:3/tomboys & short hair
-	1556494227108.jpg
-6
-d/home/probst/Images/変態/:3
-	yuri
-2
-d/home/probst/Images/変態/:3/yuri
-	..
-0
-d/home/probst/Images/変態/:3
-	tomboys & short hair
-1
-d/home/probst
-	Animu
-10
-d/home/probst/Animu
-	Temporada
-1
-d/home/probst/Animu/Temporada
-	[GJM] One Punch Man S2 - 10 [AA5056D9].mkv
-1
-d/home/probst/Animu
-	Temporada
-1
-d/run/media/probst
-	Externo
-1
-d/run/media/probst/Externo
-	Anime
-1
-d/run/media/probst/Externo/Anime
-	Hunter x Hunter
-25
-d/run/media/probst/Externo/Anime/Hunter x Hunter
-	[BlackStrat] Hunter x Hunter (2011)[BD][1080p][AVC-yuv444p10][FLAC]
-1
-d/run/media/probst/Externo/Anime/Hunter x Hunter/[BlackStrat] Hunter x Hunter (2011)[BD][1080p][AVC-yuv444p10][FLAC]
-	Hunter_x_Hunter_141_[BD][1080p][AVC-yuv444p10][FLAC][E948CAC0].mkv
-16
-d/home/probst
-	Animu
-10
-d/home/probst/Animu
-	Temporada
-1
-d/home/probst/Animu/Temporada
-	[HorribleSubs] Joshikousei no Mudazukai - 01 [1080p].mkv
-1
-d/run/media/probst/Sae/Anime/Tsuma ga Kirei ni Natta Wake
-	2 - Tsuma ga Kirei ni Natta Wake - Volume 2 [CEN] - [SakuraCircle][A99AEF01].mkv
-2
-d/home/probst
-	Documents
-9
-d/home/probst/Documents
-	CC
-2
-d/home/probst/Documents/CC
-	5_semestre
-3
-d/home/probst/Documents/CC/5_semestre
-	Comunic_Dados
-1
-d/home/probst/Documents/CC/5_semestre/Comunic_Dados
-	Comunicação de Dados e Redes de Computadores.pdf
-35
-d/home/probst
-	Images
-11
-d/home/probst/Images
-	変態
-12
-d/home/probst
-	Images
-11
-d/run/media/probst
-	Hiro
-4
-d/run/media/probst/Hiro
-	..
-0
-d/run/media/probst
-	Hiro
-4
-d/run/media
-	probst
-1
-d/run/media/probst
-	Alpha
-3
-d/run/media/probst/Alpha
-	..
-0
-d/run/media/probst
-	Sae
-5
-d/run/media/probst/Sae
-	lewd
-2
-d/run/media/probst
-	Hiro
-4
 d/run/media/probst/Hiro
 	[cyb] Biblioteca
 2
@@ -320,8 +164,164 @@ d/home/probst/Documents/CC/5_semestre/CG/provas
 	P2_2007_1.pdf
 33
 d/home/probst/Documents/CC/5_semestre/CG
-	cg_11_3d.pdf
+	cg_10_2d_curvas.pdf
+15
+d/home/probst/Documents/CC/5_semestre
+	CG
+6
+d/home/probst/Documents/CC
+	5_semestre
+5
+d/home/probst/Documents
+	Idiomas
+10
+d/home/probst/Documents/Idiomas
+	Nihongo
+1
+d/home/probst/Documents/Idiomas/Nihongo
+	Genki
+3
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_Yomikaki-hen(Textbook)
+1
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_Yomikaki-hen(Textbook)
+	..
+0
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_ListeningComprehension(Workbook)
+2
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_ListeningComprehension(Workbook)
+	..
+0
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_KaiwaBunpo-hen(Textbook)
+3
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_KaiwaBunpo-hen(Textbook)
+	K05-08.mp3
+36
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_KaiwaBunpo-hen(Textbook)
+3
+d/home/probst/Documents/Idiomas/Nihongo
+	KanjiTomo.zip
+4
+d/home/probst/Documents/Idiomas
+	Nihongo
+1
+d/home/probst
+	Animu
+13
+d/home/probst/Animu
+	Temporada
+1
+d/home/probst/Animu/Temporada
+	[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
+1
+d/home/probst/Animu
+	Temporada
+1
+d/home/probst
+	Animu
+13
+d/home/probst/Animu
+	Temporada
+1
+d/home/probst
+	Animu
+13
+d/home/probst/Animu
+	Temporada
+1
+d/home/probst
+	Animu
+13
+d/home
+	probst
+1
+d/home/probst
+	Sync
+2
+d/home/probst/Sync
+	..
+0
+d/home/probst
+	Sync
+2
+d/home
+	probst
+1
+d/
+	home
+15
+d/home
+	probst
+1
+d/home/probst/Images/cute_anime_girls
+	..
+0
+d/home/probst/Images
+	変態
+1
+d/home/probst/Images/Wallpapers
+	stone.png
+21
+d/home/probst
+	Documents
+10
+d/home/probst/Documents
+	Idiomas
+10
+d/home/probst/Documents/Idiomas
+	Nihongo
+1
+d/home/probst/Documents/Idiomas/Nihongo
+	Genki
+1
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_ListeningComprehension(Workbook)
+3
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_ListeningComprehension(Workbook)
+	W05-C.mp3
+22
+d/home/probst
+	Animu
 14
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst/Animu/Temporada
+	..
+0
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst
+	Documents
+12
+d/home/probst/Documents
+	Prog
+4
+d/home/probst/Documents/Prog
+	Go
+6
+d/home/probst/Documents/Prog/Go
+	src
+1
+d/home/probst/Documents/Prog/Go/src
+	..
+0
+d/home/probst/Documents/Prog/Go
+	src
+1
+d/home/probst/Documents/Prog
+	Go
+6
+d/home/probst/Documents/Prog/Go
+	Udemy
+3
+d/home/probst/Documents/Prog/Go/Udemy
+	..
+0
 d
 
 # Right window history (oldest to newest):
@@ -433,11 +433,13 @@ D
 :cd /run/media/probst/Hiro/pixiv/
 :cd /home/probst/Documents/CC/5_semestre/Impl_BD
 :cd /D/C/5/I/provas-anteriores-2
-:cd ~/Images/Wallpapers/
 :cd /run/media/probst/
-:cd
+:nmap/:vmap/etc.
+:cd ~/Images/Wallpapers/
 :sort
+:cd
 :q
+:mkdir Udemy
 
 # Search history (oldest to newest):
 /tr
@@ -506,9 +508,11 @@ D
 /k04-07
 /134
 /135
-/stone
 /hunter
 /141
+/k05-01
+/stone
+/w05
 
 # Prompt history (oldest to newest):
 pserveimage.jpg
@@ -516,7 +520,7 @@ pserveimage.jpg
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/probst/.local/share/vifm/Trash/000_[Some-Stuffs]_Jojo's_Bizarre_Adventure_Golden_Wind_36_[6AAE3A69].mkv
+""/home/probst/.local/share/vifm/Trash/000_[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
 
 # Directory stack (oldest to newest):
 
@@ -657,6 +661,16 @@ t/home/probst/.local/share/vifm/Trash/000_[Some-Stuffs]_Jojo's_Bizarre_Adventure
 	/home/probst/Animu/Temporada/[Some-Stuffs]_Jojo's_Bizarre_Adventure_Golden_Wind_37_[1D450285].mkv
 t/home/probst/.local/share/vifm/Trash/000_[Some-Stuffs]_Jojo's_Bizarre_Adventure_Golden_Wind_36_[6AAE3A69].mkv
 	/home/probst/Animu/Temporada/[Some-Stuffs]_Jojo's_Bizarre_Adventure_Golden_Wind_36_[6AAE3A69].mkv
+t/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Araburu Kisetsu no Otome-domo yo. - 03 [1080p].mkv
+	/home/probst/Animu/Temporada/[HorribleSubs] Araburu Kisetsu no Otome-domo yo. - 03 [1080p].mkv
+t/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Kimetsu no Yaiba - 16 [1080p].mkv
+	/home/probst/Animu/Temporada/[HorribleSubs] Kimetsu no Yaiba - 16 [1080p].mkv
+t/home/probst/.local/share/vifm/Trash/000_[GJM-DDY] Boogiepop wa Warawanai (2019) - 14 [D7840858].mkv
+	/home/probst/Animu/Temporada/[GJM-DDY] Boogiepop wa Warawanai (2019) - 14 [D7840858].mkv
+t/home/probst/.local/share/vifm/Trash/000_[GJM-DDY] Boogiepop wa Warawanai (2019) - 15 [DD1E9F94].mkv
+	/home/probst/Animu/Temporada/[GJM-DDY] Boogiepop wa Warawanai (2019) - 15 [DD1E9F94].mkv
+t/home/probst/.local/share/vifm/Trash/000_[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
+	/home/probst/Animu/Temporada/[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
 
 # State:
 f
