@@ -460,7 +460,7 @@ call plug#end()
         let g:syntastic_mode_map = {
             \ 'mode': 'passive',
             \ 'active_filetypes':
-                \ ['c', 'cpp', 'perl', 'python', 'javascript', 'json', 'html', 'haskell'] }
+                \ ['c', 'cpp', 'perl', 'python', 'javascript', 'json', 'html', 'haskell', 'R'] }
 
         " Skip check on :wq, :x, :ZZ etc
         let g:syntastic_check_on_wq = 0

@@ -14,164 +14,116 @@
 
 # TUI:
 al
-q0
+q1
 v2
 ov
 m-1
-l-2
+l-11,2
 r-11,2
 
 # Left window history (oldest to newest):
-d/run/media/probst/Hiro
-	[cyb] Biblioteca
-2
-d/run/media/probst/Hiro/[cyb] Biblioteca
-	Math
-2
-d/run/media/probst/Hiro/[cyb] Biblioteca/Math
-	graphs-and-geometry.pdf
+d/home/probst/Images/変態
+	Artistas
+3
+d/home/probst/Images/変態/Artistas
+	tkmiz
 1
-d/run/media/probst/Hiro/[cyb] Biblioteca
-	System & Scientific
-8
-d/run/media/probst/Hiro/[cyb] Biblioteca/System & Scientific
-	..
-0
-d/run/media/probst/Hiro/[cyb] Biblioteca
-	Linux & Embedded
+d/home/probst/Images/変態/Artistas/tkmiz
+	tkmiz-1151548394843754496-20190717_144506-img1.jpg
+2
+d/home/probst/Images/変態/Artistas
+	tkmiz
+1
+d/home/probst/Images/変態
+	Series
+2
+d/home/probst/Images/変態/Series
+	Yuru Camp
+2
+d/home/probst/Images/変態
+	:3
 5
-d/run/media/probst/Hiro/[cyb] Biblioteca/Linux & Embedded
-	FullBashGuide - Greg's Wiki.pdf
-2
-d/run/media/probst/Hiro/[cyb] Biblioteca
-	Humanities
-4
-d/run/media/probst/Hiro/[cyb] Biblioteca/Humanities
-	Spiritualism, Mysticism & Occultism
-1
-d/run/media/probst/Hiro/[cyb] Biblioteca/Humanities/Spiritualism, Mysticism & Occultism
-	Tulpamancy
-1
-d/run/media/probst/Hiro/[cyb] Biblioteca/Humanities/Spiritualism, Mysticism & Occultism/Tulpamancy
+d/home/probst/Images/変態/:3
 	..
 0
-d/run/media/probst/Hiro/[cyb] Biblioteca/Humanities/Spiritualism, Mysticism & Occultism
-	Paradise Lost.epub
+d/run/media/probst
+	Hiro
+3
+d/run/media/probst/Hiro
+	Filmes
+10
+d/run/media/probst/Hiro/Filmes
+	Tsubaki.Sanjûrô.1962.720p.BluRay.x264-Moshy.mkv
+5
+d/home/probst
+	Animu
+15
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst/Animu/Temporada
+	[Mad le Zisell] Cop Craft - 03 [720p].mkv
+2
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst
+	Animu
+15
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst
+	Animu
+15
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst/Animu/Temporada
+	[Mad le Zisell] Cop Craft - 03 [720p].mkv
+2
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst
+	Animu
+15
+d/run/media/probst
+	Hiro
+3
+d/run/media/probst/Hiro
+	Filmes
+10
+d/run/media/probst
+	Externo
 4
-d/run/media/probst/Hiro/[cyb] Biblioteca/Humanities
-	History
+d/run/media/probst/Externo
+	Anime
+4
+d/run/media/probst/Externo/Anime
+	Dennou Coil
+28
+d/run/media/probst/Externo/Anime/Dennou Coil
+	Dennou Coil [Aschenputtel]
+1
+d/run/media/probst/Externo/Anime/Dennou Coil/Dennou Coil [Aschenputtel]
+	[Aschenputtel] Dennou Coil 24 (720p BD AAC) [474C3A21].mkv
+5
+d/home/probst
+	Animu
+15
+d/home/probst/Animu
+	Temporada
+2
+d/home/probst/Animu/Temporada
+	[NeSubs] Karakai Jouzu no Takagi-san 2 - Episode 3 (English Softsub).mkv
+1
+d/home/probst/Animu
+	Temporada
 2
 d/home/probst
 	Documents
-9
-d/home/probst/Documents
-	CC
-2
-d/home/probst/Documents/CC
-	5_semestre
-3
-d/home/probst/Documents/CC/5_semestre
-	Ling_Formais
-2
-d/home/probst/Documents/CC/5_semestre/Ling_Formais
-	2019-06-29.jpg
-2
-d/home/probst/Documents/CC/5_semestre
-	Ling_Formais
-2
-d/home/probst/Documents/CC
-	5_semestre
-3
-d/home/probst/Documents/CC/5_semestre
-	CG
-6
-d/home/probst/Documents/CC/5_semestre/CG
-	T4
-2
-d/home/probst/Documents/CC/5_semestre/CG/T4
-	..
-0
-d/home/probst/Documents/CC/5_semestre/CG
-	T4
-2
-d/home/probst/Documents/CC/5_semestre/CG/T4
-	src
-1
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-3
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2007_1.pdf
-33
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2009_1.pdf
-31
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2010_1.pdf
-30
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2011_1.pdf
-29
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2012_1.pdf
-27
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2018_1.pdf
-22
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2013_1.pdf
-26
-d/home/probst/Documents/CC/5_semestre/CG
-	T4
-5
-d/home/probst/Documents/CC/5_semestre/CG/T4
-	src
-1
-d/home/probst/Documents/CC/5_semestre/CG/T4/src
-	Main.cpp
-4
-d/home/probst/Documents/CC/5_semestre/CG/T4
-	src
-1
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2018_1.pdf
-22
-d/home/probst/Documents/CC/5_semestre/CG
-	provas
-2
-d/home/probst/Documents/CC/5_semestre/CG/provas
-	P2_2007_1.pdf
-33
-d/home/probst/Documents/CC/5_semestre/CG
-	cg_10_2d_curvas.pdf
-15
-d/home/probst/Documents/CC/5_semestre
-	CG
-6
-d/home/probst/Documents/CC
-	5_semestre
-5
+13
 d/home/probst/Documents
 	Idiomas
 10
@@ -191,83 +143,35 @@ d/home/probst/Documents/Idiomas/Nihongo/Genki
 	Genki1_ListeningComprehension(Workbook)
 2
 d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_ListeningComprehension(Workbook)
-	..
-0
+	W06-C.mp3
+19
 d/home/probst/Documents/Idiomas/Nihongo/Genki
 	Genki1_KaiwaBunpo-hen(Textbook)
 3
 d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_KaiwaBunpo-hen(Textbook)
-	K05-08.mp3
-36
-d/home/probst/Documents/Idiomas/Nihongo/Genki
-	Genki1_KaiwaBunpo-hen(Textbook)
-3
-d/home/probst/Documents/Idiomas/Nihongo
-	KanjiTomo.zip
-4
-d/home/probst/Documents/Idiomas
-	Nihongo
-1
-d/home/probst
-	Animu
-13
-d/home/probst/Animu
-	Temporada
-1
-d/home/probst/Animu/Temporada
-	[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
-1
-d/home/probst/Animu
-	Temporada
-1
-d/home/probst
-	Animu
-13
-d/home/probst/Animu
-	Temporada
-1
-d/home/probst
-	Animu
-13
-d/home/probst/Animu
-	Temporada
-1
-d/home/probst
-	Animu
-13
-d/home
-	probst
-1
-d/home/probst
-	Sync
-2
-d/home/probst/Sync
-	..
-0
-d/home/probst
-	Sync
-2
-d/home
-	probst
-1
-d/
-	home
-15
-d/home
-	probst
-1
-d/home/probst/Images/cute_anime_girls
-	..
-0
-d/home/probst/Images
-	変態
-1
-d/home/probst/Images/Wallpapers
-	stone.png
-21
+	K07-05.mp3
+11
 d/home/probst
 	Documents
-10
+13
+d/run/media/probst
+	Externo
+4
+d/run/media/probst/Externo
+	Anime
+4
+d/run/media/probst/Externo/Anime
+	Dennou Coil
+28
+d/run/media/probst/Externo/Anime/Dennou Coil
+	Dennou Coil [Aschenputtel]
+1
+d/run/media/probst/Externo/Anime/Dennou Coil/Dennou Coil [Aschenputtel]
+	[Aschenputtel] Dennou Coil 26 (720p BD AAC) [F973C2CC].mkv
+3
+d/home/probst
+	Documents
+13
 d/home/probst/Documents
 	Idiomas
 10
@@ -276,52 +180,148 @@ d/home/probst/Documents/Idiomas
 1
 d/home/probst/Documents/Idiomas/Nihongo
 	Genki
+3
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_Yomikaki-hen(Textbook)
 1
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_Yomikaki-hen(Textbook)
+	..
+0
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_Yomikaki-hen(Textbook)
+1
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_Yomikaki-hen(Textbook)
+	..
+0
 d/home/probst/Documents/Idiomas/Nihongo/Genki
 	Genki1_ListeningComprehension(Workbook)
-3
+2
 d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_ListeningComprehension(Workbook)
-	W05-C.mp3
-22
+	W07-C.mp3
+16
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_ListeningComprehension(Workbook)
+2
+d/home/probst/Documents/Idiomas/Nihongo
+	Genki
+3
+d/home/probst/Documents/Idiomas
+	Nihongo
+1
+d/home/probst/Documents
+	Idiomas
+10
+d/run/media/probst
+	Externo
+5
+d/run/media/probst/Externo
+	Anime
+4
+d/run/media/probst/Externo/Anime
+	Danganronpa
+30
+d/run/media/probst/Externo/Anime/Danganronpa
+	Danganronpa.3.The.End.of.Hope's.Peak.High.School.Future.Arc.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD
+1
+d/run/media/probst/Externo/Anime/Danganronpa/Danganronpa.3.The.End.of.Hope's.Peak.High.School.Future.Arc.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD
+	Danganronpa.3.The.End.of.Hope's.Peak.High.School.Future.Arc.E01.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD.mkv
+12
+d/run/media/probst/Externo/Anime/Danganronpa
+	Danganronpa.3.The.End.of.Hope's.Peak.High.School.Despair.Arc.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD
+2
+d/run/media/probst/Externo/Anime/Danganronpa/Danganronpa.3.The.End.of.Hope's.Peak.High.School.Despair.Arc.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD
+	Danganronpa.3.The.End.of.Hope's.Peak.High.School.Despair.Arc.E01.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD.mkv
+11
+d/run/media/probst/Externo/Anime/Danganronpa
+	Danganronpa.3.The.End.of.Hope's.Peak.High.School.Despair.Arc.1080p.Blu-Ray.10-Bit.Dual-Audio.TrueHD.x265-iAHD
+2
+d/run/media/probst/Externo/Anime
+	Danganronpa
+30
+d/home/probst
+	Documents
+13
+d/home/probst/Documents
+	Idiomas
+10
+d/home/probst/Documents/Idiomas
+	Nihongo
+1
+d/home/probst/Documents/Idiomas/Nihongo
+	Genki
+3
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_ListeningComprehension(Workbook)
+2
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_ListeningComprehension(Workbook)
+	W07-C.mp3
+16
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_Yomikaki-hen(Textbook)
+1
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_Yomikaki-hen(Textbook)
+	..
+0
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_KaiwaBunpo-hen(Textbook)
+3
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_KaiwaBunpo-hen(Textbook)
+	K08-05.mp3
+4
 d/home/probst
 	Animu
-14
+15
 d/home/probst/Animu
 	Temporada
 2
 d/home/probst/Animu/Temporada
-	..
-0
+	[Mad le Zisell] Machikado Mazoku - 03 [720p].mkv
+11
 d/home/probst/Animu
 	Temporada
 2
 d/home/probst
 	Documents
-12
+13
 d/home/probst/Documents
-	Prog
-4
-d/home/probst/Documents/Prog
-	Go
-6
-d/home/probst/Documents/Prog/Go
-	src
+	Idiomas
+10
+d/home/probst/Documents/Idiomas
+	Nihongo
 1
-d/home/probst/Documents/Prog/Go/src
-	..
-0
-d/home/probst/Documents/Prog/Go
-	src
-1
-d/home/probst/Documents/Prog
-	Go
-6
-d/home/probst/Documents/Prog/Go
-	Udemy
+d/home/probst/Documents/Idiomas/Nihongo
+	Genki
 3
-d/home/probst/Documents/Prog/Go/Udemy
-	..
-0
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_ListeningComprehension(Workbook)
+2
+d/home/probst/Documents/Idiomas/Nihongo/Genki/Genki1_ListeningComprehension(Workbook)
+	W08-C.mp3
+13
+d/home/probst/Documents/Idiomas/Nihongo/Genki
+	Genki1_ListeningComprehension(Workbook)
+2
+d/home/probst/Documents/Idiomas/Nihongo
+	Genki
+3
+d/home/probst/Documents/Idiomas
+	Nihongo
+1
+d/home/probst/Documents
+	LN
+9
+d/home/probst
+	Images
+8
+d/home/probst/Images
+	Screenshots
+9
+d/home/probst/Images/Screenshots
+	mpv
+1
+d/home/probst/Images/Screenshots/mpv
+	[Mad le Zisell] Machikado Mazoku - 05 [720p].mkv - (00:19:11) - 0011.jpg
+15
 d
 
 # Right window history (oldest to newest):
@@ -406,6 +406,7 @@ D/home/probst/Images/Wallpapers
 D
 
 # Command line history (oldest to newest):
+:mkdir "Shoujo Shuumatsu Ryokou"
 :cd /run/media/probst/Sae/lewd/Nikumikyo/Origin Unknown
 :cd /run/media/probst/Sae/lewd/Nikumikyo/
 :invert
@@ -419,12 +420,10 @@ D
 :cd /run/media/probst/Externo/Anime/Hunter x Hunter/[BlackStrat] Hunter x Hunter (2011)[BD][1080p][AVC-yuv444p10][FLAC]
 :150
 :cd /home/probst/Documents/CC/5_semestre/Ling_Formais
-:gm
 :cd 
 :cd /run/media/probst
 :cd /run/media/probst/Hiro/Seinfeld.Seasons.01-09.1080p.Hevc.10bit.x265-Bearfish/
 :cd /run/media/probst/Hiro/Seinfeld.Seasons.01-09.1080p.Hevc.10bit.x265-Bearfish
-:1
 :cd /run/media/probst/Hiro/Filmes/
 :cd /run/media/probst/Hiro/Seinfeld.Seasons.01-09.1080p.Hevc.10bit.x265-Bearfish/Season\ 9/
 :help
@@ -433,15 +432,21 @@ D
 :cd /run/media/probst/Hiro/pixiv/
 :cd /home/probst/Documents/CC/5_semestre/Impl_BD
 :cd /D/C/5/I/provas-anteriores-2
-:cd /run/media/probst/
 :nmap/:vmap/etc.
+:mkdir Udemy
 :cd ~/Images/Wallpapers/
-:sort
+:1
+:gm
+:cd /run/media/probst/
 :cd
 :q
-:mkdir Udemy
+:sort
 
 # Search history (oldest to newest):
+/kano
+/ca
+/guei
+/shou
 /tr
 /darker_tr
 /yam
@@ -494,7 +499,6 @@ D
 /suba
 /crazy
 /k03
-/train
 /sore
 /w03-a
 /w03-b
@@ -513,6 +517,13 @@ D
 /k05-01
 /stone
 /w05
+/denn
+/dark
+/k06
+/train
+/w0
+/w06
+/danga
 
 # Prompt history (oldest to newest):
 pserveimage.jpg
@@ -520,7 +531,7 @@ pserveimage.jpg
 # Local filter history (oldest to newest):
 
 # Registers:
-""/home/probst/.local/share/vifm/Trash/000_[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
+""/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Kimetsu no Yaiba - 20 [1080p].mkv
 
 # Directory stack (oldest to newest):
 
@@ -671,6 +682,24 @@ t/home/probst/.local/share/vifm/Trash/000_[GJM-DDY] Boogiepop wa Warawanai (2019
 	/home/probst/Animu/Temporada/[GJM-DDY] Boogiepop wa Warawanai (2019) - 15 [DD1E9F94].mkv
 t/home/probst/.local/share/vifm/Trash/000_[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
 	/home/probst/Animu/Temporada/[GJM-DDY] Boogiepop wa Warawanai (2019) - 16 [7E6E6956].mkv
+t/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Tejina-senpai - 04 [1080p].mkv
+	/home/probst/Animu/Temporada/[HorribleSubs] Tejina-senpai - 04 [1080p].mkv
+t/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Araburu Kisetsu no Otome-domo yo. - 04 [1080p].mkv
+	/home/probst/Animu/Temporada/[HorribleSubs] Araburu Kisetsu no Otome-domo yo. - 04 [1080p].mkv
+t/home/probst/.local/share/vifm/Trash/000_cop craft - 02.mkv
+	/home/probst/Animu/Temporada/cop craft - 02.mkv
+t/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Tejina-senpai - 05 [1080p].mkv
+	/home/probst/Animu/Temporada/[HorribleSubs] Tejina-senpai - 05 [1080p].mkv
+t/home/probst/.local/share/vifm/Trash/000_[Mad le Zisell] Joshikousei no Mudazukai - 05 [720p].mkv
+	/home/probst/Animu/Temporada/[Mad le Zisell] Joshikousei no Mudazukai - 05 [720p].mkv
+t/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Tejina-senpai - 06 [1080p].mkv
+	/home/probst/Animu/Temporada/[HorribleSubs] Tejina-senpai - 06 [1080p].mkv
+t/home/probst/.local/share/vifm/Trash/000_[Some-Stuffs]_Jojo's_Bizarre_Adventure_Golden_Wind_39_[EDA21C8A].mkv
+	/home/probst/Animu/Temporada/[Some-Stuffs]_Jojo's_Bizarre_Adventure_Golden_Wind_39_[EDA21C8A].mkv
+t/home/probst/.local/share/vifm/Trash/000_[Mad le Zisell] Joshikousei no Mudazukai - 07 [720p1].mkv
+	/home/probst/Animu/Temporada/[Mad le Zisell] Joshikousei no Mudazukai - 07 [720p1].mkv
+t/home/probst/.local/share/vifm/Trash/000_[HorribleSubs] Kimetsu no Yaiba - 20 [1080p].mkv
+	/home/probst/Animu/Temporada/[HorribleSubs] Kimetsu no Yaiba - 20 [1080p].mkv
 
 # State:
 f

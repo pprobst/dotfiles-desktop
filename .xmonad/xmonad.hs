@@ -87,7 +87,7 @@ myAreaScreenshot = "maims"
 myFileManager = "vifmrun"
 
 -- Program launcher
-myLauncher = "dmenu_run -i -b -fn 'Iosevka:pixelsize=15' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -dim 0.4 -p '>' -q"
+myLauncher = "dmenu_run -i -b -fn 'Iosevka:pixelsize=15' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -dim 0.4 -p '>' -q -h 25"
 
 -- xmobar location
 myXmobarrc = "~/.xmonad/xmobar.hs"
@@ -125,26 +125,28 @@ myWorkspaces = [ Node "Browser" [] -- a workspace for your browser
 -- Window rules
 --
 myManageHook = composeAll
-    [ resource  =? "desktop_window" --> doIgnore
-    , className =? "Gcolor2"        --> doCenterFloat
-    , className =? "Steam"          --> doFullFloat
-    , className =? "Godot"          --> doFloat
-    , className =? "Gimp"           --> doFloat
-    , className =? "Lxappearance"   --> doCenterFloat
-    , resource  =? "pqiv"           --> doCenterFloat
-    , className =? "Pavucontrol"    --> doCenterFloat
-    , className =? "File-roller"    --> doCenterFloat
-    , className =? "kanjitomo-reader-Launcher"      --> doFloat
-    , className =? "mpv"            --> doCenterFloat
-    , className =? "Navigator"      --> doFullFloat
-    , className =? "Umineko5to8"    --> doFullFloat
-    , className =? "oneshot"        --> doFullFloat
-    , className =? "steam_app_418460"        --> doFullFloat
-    , className =? "hl2_linux"        --> doFullFloat
-    , className =? "rogame.exe"        --> doFullFloat
-    , className =? "deadcells"        --> doFullFloat
-    , isDialog --> doCenterFloat
-    , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
+    [ resource  =? "desktop_window"               --> doIgnore
+    , className =? "Gcolor2"                      --> doCenterFloat
+    , className =? "Steam"                        --> doFullFloat
+    , className =? "Godot"                        --> doFloat
+    , className =? "Gimp"                         --> doFloat
+    , className =? "Lxappearance"                 --> doCenterFloat
+    , resource  =? "pqiv"                         --> doCenterFloat
+    , className =? "Pavucontrol"                  --> doCenterFloat
+    , className =? "File-roller"                  --> doCenterFloat
+    , className =? "kanjitomo-reader-Launcher"    --> doFloat
+    , className =? "mpv"                          --> doCenterFloat
+    , className =? "Navigator"                    --> doFullFloat
+    , className =? "Umineko5to8"                  --> doFullFloat
+    , className =? "oneshot"                      --> doFullFloat
+    , className =? "steam_app_418460"             --> doFullFloat
+    , className =? "hl2_linux"                    --> doFullFloat
+    , className =? "rogame.exe"                   --> doFullFloat
+    , className =? "deadcells"                    --> doFullFloat
+    , className =? "DaggerfallUnity.x86_64"       --> doFullFloat
+    , className =? "Starsector 0.9.1a-RC8"        --> doFullFloat
+    , isDialog                                    --> doCenterFloat
+    , isFullscreen                                --> (doF W.focusDown <+> doFullFloat)]
 
 ------------------------------------------------------------------------
 
