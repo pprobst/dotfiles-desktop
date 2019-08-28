@@ -145,6 +145,7 @@ myManageHook = composeAll
     , className =? "deadcells"                    --> doFullFloat
     , className =? "DaggerfallUnity.x86_64"       --> doFullFloat
     , className =? "Starsector 0.9.1a-RC8"        --> doFullFloat
+    , className =? "nuclearthrone"                --> doFullFloat
     , isDialog                                    --> doCenterFloat
     , isFullscreen                                --> (doF W.focusDown <+> doFullFloat)]
 

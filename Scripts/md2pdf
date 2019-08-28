@@ -1,10 +1,13 @@
 #!/bin/sh
+# add -f gfm \  if not using pandoc-eqnos
+# else --filter pandoc-eqnos \
 
 pandoc "$1" \
     -f gfm \
     --include-in-header chapter_break.tex \
     --include-in-header inline_code.tex \
     --highlight-style pygments.theme \
+    -V lang=pt-BR \
     -V linkcolor:blue \
     -V geometry:a4paper \
     -V geometry:margin=2cm \
