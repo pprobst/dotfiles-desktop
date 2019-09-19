@@ -98,8 +98,8 @@ Plug 'suan/vim-instant-markdown'
 " Conceals lambdas/inline functions with a lambda character for various languages
 Plug 'calebsmith/vim-lambdify'
 
-" Go support 
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" R support 
+Plug 'jalvesaq/nvim-r'
 
 " Deoplete – Code Completion Engine *only on nvim!
 if has('nvim')

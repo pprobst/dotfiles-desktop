@@ -1,7 +1,6 @@
 ! Transparency
 st.alpha: 1
 
-
 ! Border
 st.borderpx: 10
 
