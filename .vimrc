@@ -76,7 +76,7 @@ Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 
 " Plugin options
-Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
@@ -100,6 +100,9 @@ Plug 'calebsmith/vim-lambdify'
 
 " R support 
 Plug 'jalvesaq/nvim-r'
+
+" Rust support
+Plug 'racer-rust/vim-racer'
 
 " Deoplete – Code Completion Engine *only on nvim!
 if has('nvim')
@@ -274,6 +277,10 @@ call plug#end()
     set shiftwidth=4
     """ Don't highlight whitespace in Go files
     let g:go_highlight_trailing_whitespace_error=0
+    """ Rust - complete function definition preview
+    let g:racer_experimental_completer = 1
+    """ Automatic rustfmt when saving a buffer
+    let g:rustfmt_autosave = 1
     """ set noexpandtab
     """ Only auto-comment newline for block comments {{{
         augroup AutoBlockComment

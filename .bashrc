@@ -5,6 +5,7 @@
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/Scripts:$PATH"
 export PATH="$HOME/Scripts/colorscripts:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/Documents/Prog/Go"
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
 

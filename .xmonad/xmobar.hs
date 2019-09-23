@@ -1,6 +1,6 @@
 Config {
     position = Top,
-    font = "xft:Iosevka:size=14:antialias=true,M+ 1p:style=regular:size=14:antialias=true,siji:size=16:antialias=true", -- siji converted to ttf
+    font = "xft:Iosevka Custom:style=Regular:size=14:antialias=true,M+ 1p:style=regular:size=14:antialias=true,siji:size=16:antialias=true", -- siji converted to ttf
     bgColor = "#18191A",
     fgColor = "#C2C5C6",
     border = BottomB,

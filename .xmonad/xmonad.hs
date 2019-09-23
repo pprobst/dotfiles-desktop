@@ -56,7 +56,7 @@ import Data.Tree
 -- Colors and borders
 --
 myNormalBorderColor  = "#262829"
-myFocusedBorderColor = "#3B6585"
+myFocusedBorderColor = "#2E536F"
 
 -- Window title color
 xmobarTitleColor = "#9A758E"
@@ -87,7 +87,7 @@ myAreaScreenshot = "maims"
 myFileManager = "vifmrun"
 
 -- Program launcher
-myLauncher = "dmenu_run -i -b -fn 'Iosevka:pixelsize=15' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -dim 0.4 -p '>' -q -h 25"
+myLauncher = "dmenu_run -i -b -fn 'Iosevka Custom:style=Regular:pixelsize=15' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -dim 0.4 -p '>' -q -h 25"
 
 -- xmobar location
 myXmobarrc = "~/.xmonad/xmobar.hs"

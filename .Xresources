@@ -5,5 +5,5 @@ st.alpha: 1
 st.borderpx: 10
 
 ! Font
-st.font: Iosevka:pixelsize=15:antialias=true:autohint=true,M+ 1p:style=regular:pixelsize=15:antialias=true:autohint=true
-st.boldFont: Iosevka:bold:pixelsize=15:antialias=true:autohint=true,M+ 1p:style=bold:pixelsize=15:antialias=true:autohint=true
+st.font: Iosevka Custom:style=Regular:pixelsize=15:antialias=true:autohint=true,M+ 1p:style=regular:pixelsize=15:antialias=true:autohint=true
+st.boldFont: Iosevka Custom:style=Bold:pixelsize=15:antialias=true:autohint=true,M+ 1p:style=bold:pixelsize=15:antialias=true:autohint=true
