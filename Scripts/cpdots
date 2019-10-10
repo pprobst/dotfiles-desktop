@@ -19,7 +19,6 @@ cp -r ~/.config/mpd/mpd.conf /home/probst/Repos/dotfiles-desktop/.config/mpd
 cp -r ~/.config/mpv /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/neofetch /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/pcmanfm/default /home/probst/Repos/dotfiles-desktop/.config/pcmanfm
-cp -r ~/.config/ranger /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/zathura /home/probst/Repos/dotfiles-desktop/.config
 rm ~/.config/vifm/vifminfo
 cp -r ~/.config/vifm /home/probst/Repos/dotfiles-desktop/.config

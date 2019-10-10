@@ -146,6 +146,8 @@ myManageHook = composeAll
     , className =? "DaggerfallUnity.x86_64"       --> doFullFloat
     , className =? "Starsector 0.9.1a-RC8"        --> doFullFloat
     , className =? "nuclearthrone"                --> doFullFloat
+    , className =? "cogmind.exe"                  --> doFullFloat
+    , className =? "CoQ.x86_64"                   --> doCenterFloat
     , isDialog                                    --> doCenterFloat
     , isFullscreen                                --> (doF W.focusDown <+> doFullFloat)]
 
@@ -405,7 +407,7 @@ myFocusFollowsMouse = True
 -- Startup hook
 --
 myStartupHook = do
-            spawnOnce "feh --bg-fill /home/probst/Images/Wallpapers/current-desktop.png"
+            --spawnOnce "feh --bg-fill /home/probst/Images/Wallpapers/current-desktop.png"
             --spawnOnce "feh --bg-tile /home/probst/Images/Wallpapers/current-desktop.png"
             setWMName "LG3D"
 

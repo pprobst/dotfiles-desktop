@@ -16,10 +16,12 @@ play-with-mpv &
 xrdb -merge ~/.Xresources &
 wal -R -n &
 setxkbmap -model abnt2 -layout br -variant abnt2 &
+feh --bg-fill /home/probst/Images/Wallpapers/current-desktop.png
 
 # SESSIONS
 exec xmonad
 #exec ck-launch-session dbus-launch startxfce4
+#exec startxfce4
 #exec startlxqt
 #exec startkde
 #exec i3

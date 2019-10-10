@@ -7,7 +7,7 @@ export PATH="$HOME/Scripts:$PATH"
 export PATH="$HOME/Scripts/colorscripts:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/Documents/Prog/Go"
-export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin"
+export PATH="$PATH:/usr/bin/go:$GOPATH/bin"
 
 # If not running interactively, don't do anything
 export VISUAL=nvim
