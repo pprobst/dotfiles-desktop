@@ -87,7 +87,7 @@ myAreaScreenshot = "maims"
 myFileManager = "vifmrun"
 
 -- Program launcher
-myLauncher = "dmenu_run -i -b -fn 'Iosevka Custom:style=Regular:pixelsize=15' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -dim 0.4 -p '>' -q -h 25"
+myLauncher = "dmenu_run -i -b -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -dim 0.4 -p '>' -q -h 25"
 
 -- xmobar location
 myXmobarrc = "~/.xmonad/xmobar.hs"
@@ -147,7 +147,15 @@ myManageHook = composeAll
     , className =? "Starsector 0.9.1a-RC8"        --> doFullFloat
     , className =? "nuclearthrone"                --> doFullFloat
     , className =? "cogmind.exe"                  --> doFullFloat
+    , className =? "spirits abyss.exe"            --> doFullFloat
+    , className =? "dosbox.exe"                   --> doFullFloat
+    , className =? "Wine"                         --> doFullFloat
+    , className =? "gzdoom"                       --> doFullFloat
+    , title     =? "The Ultimate DOOM"            --> doFullFloat
+    , title     =? "WazHack"                      --> doFullFloat
+    , title     =? "TheSilverCase"                --> doCenterFloat
     , className =? "CoQ.x86_64"                   --> doCenterFloat
+    , className =? "adl"                          --> doCenterFloat
     , isDialog                                    --> doCenterFloat
     , isFullscreen                                --> (doF W.focusDown <+> doFullFloat)]
 

@@ -11,7 +11,6 @@ redshift &
 compton --config ~/.config/compton/compton.conf -b &
 mpd &
 dunst &
-play-with-mpv &
 #transmission-gtk -m &
 xrdb -merge ~/.Xresources &
 wal -R -n &

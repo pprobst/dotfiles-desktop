@@ -101,6 +101,9 @@ Plug 'calebsmith/vim-lambdify'
 " R support 
 Plug 'jalvesaq/nvim-r'
 
+" textX support
+Plug 'igordejanovic/textx.vim'
+
 " Rust support
 Plug 'racer-rust/vim-racer'
 
@@ -118,13 +121,10 @@ endif
 let g:deoplete#enable_at_startup = 1
 
 " THEMES "
-Plug 'trusktr/seti.vim'
-Plug 'w0ng/vim-hybrid'
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
-Plug 'noahfrederick/vim-hemisu'
 Plug 'dylanaraps/wal.vim'
-Plug 'szorfein/fantasy.vim'
+Plug 'jacoborus/tender.vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -143,7 +143,6 @@ call plug#end()
                 autocmd!
                 autocmd BufNewFile,BufRead *.md set ft=markdown tw=79
                 autocmd BufNewFile,BufRead *.tex set ft=tex tw=79
-                autocmd BufNewFile,BufRead *.txt set ft=sh tw=79
             augroup END
         """ }}}
         """ 256 colors for maximum jellybeans bling. See commit log for info {{{
@@ -467,7 +466,7 @@ call plug#end()
         let g:syntastic_mode_map = {
             \ 'mode': 'passive',
             \ 'active_filetypes':
-                \ ['c', 'cpp', 'perl', 'python', 'javascript', 'json', 'html', 'haskell', 'R'] }
+                \ ['c', 'cpp', 'perl', 'python', 'javascript', 'json', 'html', 'haskell', 'R', 'hs'] }
 
         " Skip check on :wq, :x, :ZZ etc
         let g:syntastic_check_on_wq = 0
