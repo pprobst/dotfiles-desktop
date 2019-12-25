@@ -12,16 +12,15 @@ Config {
     allDesktops = True,
     persistent = False,
     commands = [
-        Run Cpu [
+        Run MultiCpu [
             "-t", "<fc=#9A758E></fc> <total>%",
             --"-t", "<fc=#9A758E>cpu</fc> <total>%",
             "-L", "10",
             "-H", "70",
             "--high", "#FFB6B0"
             ] 10,
-         Run CoreTemp [
-            "-t", "<fc=#9A758E></fc> <core0>°C",
-            --"-t", "<fc=#9A758E>temp</fc> <core0>°C",
+        Run MultiCoreTemp [
+            "-t", "<fc=#9A758E></fc> <avg>°C",
             "-L", "40", "-H", "60",
             "-h", "red"
             ] 10,
@@ -47,6 +46,6 @@ Config {
         ],
     sepChar = "%",
     alignSep = "||",
-    template = "%StdinReader% || %mpd% | %volumelevel% | %cpu% | %coretemp% | %memory% | <fc=#FFFFCC>%date%</fc> | %redshift%"
-    --template = "%StdinReader% || { %mpd%%volumelevel% %cpu% %coretemp% %memory% <fc=#C2C5C6>%date%</fc> %redshift%} "
+    template = "%StdinReader% || %mpd% | %volumelevel% | %multicpu% | %memory% | <fc=#FFFFCC>%date%</fc> | %redshift%"
+    --template = "%StdinReader% || %mpd% | %volumelevel% | %multicpu% | %multicoretemp% | %memory% | <fc=#FFFFCC>%date%</fc> | %redshift%"
 }
