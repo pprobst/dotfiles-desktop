@@ -93,13 +93,13 @@ Plug 'lervag/vimtex'
 Plug 'junegunn/goyo.vim'
 
 " Markdown preview
-Plug 'suan/vim-instant-markdown'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 " Conceals lambdas/inline functions with a lambda character for various languages
 Plug 'calebsmith/vim-lambdify'
 
 " R support 
-Plug 'jalvesaq/nvim-r'
+" Plug 'jalvesaq/nvim-r'
 
 " textX support
 Plug 'igordejanovic/textx.vim'
@@ -278,6 +278,7 @@ call plug#end()
     let g:go_highlight_trailing_whitespace_error=0
     """ Rust - complete function definition preview
     let g:racer_experimental_completer = 1
+    let g:racer_insert_paren = 1
     """ Automatic rustfmt when saving a buffer
     let g:rustfmt_autosave = 1
     """ set noexpandtab
@@ -466,7 +467,7 @@ call plug#end()
         let g:syntastic_mode_map = {
             \ 'mode': 'passive',
             \ 'active_filetypes':
-                \ ['c', 'cpp', 'perl', 'python', 'javascript', 'json', 'html', 'haskell', 'R', 'hs'] }
+                \ ['c', 'cpp', 'perl', 'python', 'javascript', 'json', 'html', 'haskell', 'R', 'hs', 'rs'] }
 
         " Skip check on :wq, :x, :ZZ etc
         let g:syntastic_check_on_wq = 0

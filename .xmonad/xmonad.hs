@@ -125,39 +125,40 @@ myWorkspaces = [ Node "Browser" [] -- a workspace for your browser
 -- Window rules
 --
 myManageHook = composeAll
-    [ resource  =? "desktop_window"               --> doIgnore
-    , className =? "Gcolor2"                      --> doCenterFloat
-    , className =? "Steam"                        --> doFullFloat
-    , className =? "Godot"                        --> doFloat
-    , className =? "Gimp"                         --> doFloat
-    , className =? "Lxappearance"                 --> doCenterFloat
-    , resource  =? "pqiv"                         --> doCenterFloat
-    , className =? "Pavucontrol"                  --> doCenterFloat
-    , className =? "File-roller"                  --> doCenterFloat
-    , className =? "kanjitomo-reader-Launcher"    --> doFloat
-    , className =? "mpv"                          --> doCenterFloat
-    , className =? "Navigator"                    --> doFullFloat
-    , className =? "Umineko5to8"                  --> doFullFloat
-    , className =? "oneshot"                      --> doFullFloat
-    , className =? "steam_app_418460"             --> doFullFloat
-    , className =? "hl2_linux"                    --> doFullFloat
-    , className =? "rogame.exe"                   --> doFullFloat
-    , className =? "deadcells"                    --> doFullFloat
-    , className =? "DaggerfallUnity.x86_64"       --> doFullFloat
-    , className =? "Starsector 0.9.1a-RC8"        --> doFullFloat
-    , className =? "nuclearthrone"                --> doFullFloat
-    , className =? "cogmind.exe"                  --> doFullFloat
-    , className =? "spirits abyss.exe"            --> doFullFloat
-    , className =? "dosbox.exe"                   --> doFullFloat
-    , className =? "Wine"                         --> doFullFloat
-    , className =? "gzdoom"                       --> doFullFloat
-    , title     =? "The Ultimate DOOM"            --> doFullFloat
-    , title     =? "WazHack"                      --> doFullFloat
-    , title     =? "TheSilverCase"                --> doCenterFloat
-    , className =? "CoQ.x86_64"                   --> doCenterFloat
-    , className =? "adl"                          --> doCenterFloat
-    , isDialog                                    --> doCenterFloat
-    , isFullscreen                                --> (doF W.focusDown <+> doFullFloat)]
+    [ resource  =? "desktop_window"                 --> doIgnore
+    , className =? "Gcolor2"                        --> doCenterFloat
+    , className =? "Steam"                          --> doFullFloat
+    , className =? "Lutris"                         --> doCenterFloat
+    , className =? "Godot"                          --> doFloat
+    , className =? "Gimp"                           --> doFloat
+    , className =? "Lxappearance"                   --> doCenterFloat
+    , resource  =? "pqiv"                           --> doCenterFloat
+    , className =? "Pavucontrol"                    --> doCenterFloat
+    , className =? "File-roller"                    --> doCenterFloat
+    , className =? "kanjitomo-reader-Launcher"      --> doFloat
+    , className =? "mpv"                            --> doCenterFloat
+    , className =? "Navigator"                      --> doFullFloat
+    , className =? "oneshot"                        --> doFullFloat
+    , className =? "steam_app_418460"               --> doFullFloat
+    , className =? "hl2_linux"                      --> doFullFloat
+    , className =? "deadcells"                      --> doFullFloat
+    , className =? "DaggerfallUnity.x86_64"         --> doFullFloat
+    , className =? "Starsector 0.9.1a-RC8"          --> doFullFloat
+    , className =? "cogmind.exe"                    --> doFullFloat
+    , className =? "spirits abyss.exe"              --> doFullFloat
+    , className =? "dosbox.exe"                     --> doFullFloat
+    , className =? "Wine"                           --> doFullFloat
+    , className =? "gzdoom"                         --> doFullFloat
+    , className =? "ia"                             --> doFullFloat
+    , className =? "t-engine"                       --> doFullFloat
+    , className =? "cataclysm-tiles"                --> doFullFloat
+    , className =? "SkullGirls.x86_64-pc-linux-gnu" --> doCenterFloat
+    , title     =? "WazHack"                        --> doFullFloat
+    , title     =? "TheSilverCase"                  --> doCenterFloat
+    , className =? "CoQ.x86_64"                     --> doCenterFloat
+    , className =? "adl"                            --> doCenterFloat
+    , isDialog                                      --> doCenterFloat
+    , isFullscreen                                  --> (doF W.focusDown <+> doFullFloat)]
 
 ------------------------------------------------------------------------
 
@@ -167,8 +168,8 @@ myManageHook = composeAll
 -- mySpacing = spacingRaw True (Border 2 2 2 2) True (Border 2 2 2 2) True
 
 myLayout = avoidStruts (
-    ThreeColMid 1 (3/100) (1/2) |||
     ResizableTall 1 (3/100) (1/2) [] |||
+    ThreeColMid 1 (3/100) (1/2) |||
     Grid |||
     multiCol [1] 1 0.01 (-0.5) |||
     spiral (6/7) |||
@@ -415,9 +416,10 @@ myFocusFollowsMouse = True
 -- Startup hook
 --
 myStartupHook = do
-            --spawnOnce "feh --bg-fill /home/probst/Images/Wallpapers/current-desktop.png"
+            spawnOnce "feh --bg-fill /home/probst/Images/Wallpapers/current-desktop.png"
             --spawnOnce "feh --bg-tile /home/probst/Images/Wallpapers/current-desktop.png"
-            setWMName "LG3D"
+            spawnOnce "transmission-gtk -m"
+            --setWMName "LG3D" to make java programs work (lol)
 
 ------------------------------------------------------------------------
 

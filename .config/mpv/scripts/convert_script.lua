@@ -732,6 +732,6 @@ mp.set_key_bindings({
     {"mouse_btn0", function(e) rect_button_press_event("mouse_btn0", "up") end, function(e) rect_button_press_event("mouse_btn0", "down") end},
 }, "draw_rectangle", "force")
 
-mp.add_key_binding("shift+w", "convert_script", convert_script_hotkey_call)
+mp.add_key_binding("alt+w", "convert_script", convert_script_hotkey_call)
 
 mp.register_event("tick", tick)

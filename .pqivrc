@@ -1,5 +1,5 @@
 [options]
-transparent-background=1
+transparent-background=0
 fade=1
 hide-info-box=1
 

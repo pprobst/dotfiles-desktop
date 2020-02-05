@@ -12,7 +12,7 @@ export PATH="$PATH:/usr/bin/go:$GOPATH/bin"
 # If not running interactively, don't do anything
 export VISUAL=nvim
 export EDITOR=nvim
-export BROWSER=vivaldi
+export BROWSER=firefox-developer-edition
 
 [[ $- != *i* ]] && return
 
