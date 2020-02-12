@@ -26,8 +26,6 @@ nnoremap <down> :resize -5<cr>
 " VIM-PLUG RELATED "
 call plug#begin('~/.vim/plugged')
 
-Plug 'ervandew/supertab'
-
 " Fuzzy finder (files, mru, etc)
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -43,13 +41,6 @@ Plug 'junegunn/vim-easy-align'
 
 " Super easy commenting, toggle comments etc
 Plug 'scrooloose/nerdcommenter'
-
-" Group dependencies, vim-snippets depends on ultisnips
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'garbas/vim-snipmate'
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -81,16 +72,15 @@ Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symli
 " Unmanaged plugin (manually installed and updated)
 " Plug '~/my-prototype-plugin'
 
-" Awesome syntax checker
-" REQUIREMENTS: See :h syntastic-intro
-Plug 'scrooloose/syntastic'
-
 " LaTeX support
 " Plug 'vim-latex/vim-latex'
 Plug 'lervag/vimtex'
 
 " Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim'
+
+" See colors in the file!
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Markdown preview
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
@@ -105,26 +95,33 @@ Plug 'calebsmith/vim-lambdify'
 Plug 'igordejanovic/textx.vim'
 
 " Rust support
-Plug 'racer-rust/vim-racer'
+" Plug 'racer-rust/vim-racer'
 
 " Deoplete – Code Completion Engine *only on nvim!
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-  Plug 'zchee/deoplete-clang'
-  Plug 'deoplete-plugins/deoplete-jedi'
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
+" if has('nvim')
+"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+"  Plug 'zchee/deoplete-clang'
+"  Plug 'deoplete-plugins/deoplete-jedi'
+"else
+"  Plug 'Shougo/deoplete.nvim'
+"  Plug 'roxma/nvim-yarp'
+"  Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+"let g:deoplete#enable_at_startup = 1
+
+" Code completion "
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Sublime-style multiple selection "
+Plug 'terryma/vim-multiple-cursors'
 
 " THEMES "
 Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'jacoborus/tender.vim'
+Plug 'chriskempson/base16-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -136,7 +133,7 @@ call plug#end()
 """ }}}
 """ User interface {{{
     """ Syntax highlighting {{{
-        set background=dark                  
+        " set termguicolors -- to make hexokinase work
         colorscheme jellybeans                 " colorscheme from plugin
         """ Force behavior and filetypes, and by extension highlighting {{{
             augroup FileTypeRules
@@ -144,11 +141,6 @@ call plug#end()
                 autocmd BufNewFile,BufRead *.md set ft=markdown tw=79
                 autocmd BufNewFile,BufRead *.tex set ft=tex tw=79
             augroup END
-        """ }}}
-        """ 256 colors for maximum jellybeans bling. See commit log for info {{{
-            if (&term =~ "xterm") || (&term =~ "screen")
-                set t_Co=256
-            endif
         """ }}}
         """ Custom highlighting, where NONE uses terminal background {{{
            function! CustomHighlighting()
@@ -345,20 +337,10 @@ call plug#end()
 
         " Highlight last inserted text
         nnoremap gV '[V']
+        " Enable disable Goyo
+        map <leader>g :Goyo<CR>
+        map <leader>G :Goyo!<CR>
     """ }}}
-    """ Functions and/or fancy keybinds {{{
-        """ Toggle syntax highlighting {{{
-            function! ToggleSyntaxHighlighthing()
-                if exists("g:syntax_on")
-                    syntax off
-                else
-                    syntax on
-                    call CustomHighlighting()
-                endif
-            endfunction
-
-            nnoremap <leader>s :call ToggleSyntaxHighlighthing()<CR>
-        """ }}}
         """ Toggle relativenumber using <leader>r {{{
             function! NumberToggle()
                 if(&relativenumber == 1)
@@ -425,12 +407,9 @@ call plug#end()
     """ Plugins {{{
         " Toggle undo history tree
         nnoremap <F5> :UndotreeToggle<CR>
-
-        " Syntastic - toggle error list. Probably should be toggleable.
-        noremap <silent><leader>lo :Errors<CR>
-        noremap <silent><leader>lc :lclose<CR>
     """ }}}
 """ }}}
+
 """ Plugin settings {{{
     """ Startify {{{
         let g:startify_bookmarks = [
@@ -442,6 +421,120 @@ call plug#end()
             \ ''
             \ ]
         let g:startify_files_number = 5
+    """ }}}
+    """ coc {{{
+        command! -nargs=0 Prettier :CocCommand prettier.formatFile
+        let g:coc_global_extensions = [
+        \ 'coc-snippets',
+        \ 'coc-pairs',
+        \ 'coc-tsserver',
+        \ 'coc-html',
+        \ 'coc-css',
+        \ 'coc-prettier',
+        \ 'coc-json',
+        \ 'coc-texlab',
+        \ 'coc-rls',
+        \ 'coc-python',
+        \ ]
+
+        " From Coc Readme
+        set updatetime=300
+
+        " Some servers have issues with backup files, see #649
+        set nobackup
+        set nowritebackup
+
+        " Don't give |ins-completion-menu| messages.
+        set shortmess+=c
+
+        " Always show signcolumns
+        set signcolumn=yes
+
+        " Use tab for trigger completion with characters ahead and navigate.
+        " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+        inoremap <silent><expr> <TAB>
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
+        inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+        function! s:check_back_space() abort
+        let col = col('.') - 1
+        return !col || getline('.')[col - 1]  =~# '\s'
+        endfunction
+
+        " Use <c-space> to trigger completion.
+        inoremap <silent><expr> <c-space> coc#refresh()
+
+        " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
+        " Coc only does snippet and additional edit on confirm.
+        inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+        " Use `[g` and `]g` to navigate diagnostics
+        nmap <silent> [g <Plug>(coc-diagnostic-prev)
+        nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+        " Remap keys for gotos
+        nmap <silent> gd <Plug>(coc-definition)
+        nmap <silent> gy <Plug>(coc-type-definition)
+        nmap <silent> gi <Plug>(coc-implementation)
+        nmap <silent> gr <Plug>(coc-references)
+
+        " Use D to show documentation in preview window
+        nnoremap <silent> D :call <SID>show_documentation()<CR>
+
+        function! s:show_documentation()
+        if (index(['vim','help'], &filetype) >= 0)
+            execute 'h '.expand('<cword>')
+        else
+            call CocAction('doHover')
+        endif
+        endfunction
+
+        " Highlight symbol under cursor on CursorHold
+        "autocmd CursorHold * silent call CocActionAsync('highlight')
+
+        " Remap for rename current word
+        nmap <rn> <Plug>(coc-rename)
+
+        " Remap for format selected region
+        xmap <leader>f  <Plug>(coc-format-selected)
+        nmap <leader>f  <Plug>(coc-format-selected)
+
+        augroup mygroup
+        autocmd!
+        " Setup formatexpr specified filetype(s).
+        autocmd FileType json setl formatexpr=CocAction('formatSelected')
+        " Update signature help on jump placeholder
+        autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+        augroup end
+
+        " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+        xmap <leader>a  <Plug>(coc-codeaction-selected)
+        nmap <leader>a  <Plug>(coc-codeaction-selected)
+
+        " Remap for do codeAction of current line
+        nmap <leader>ac  <Plug>(coc-codeaction)
+        " Fix autofix problem of current line
+        nmap <leader>qf  <Plug>(coc-fix-current)
+
+        " Create mappings for function text object, requires document symbols feature of languageserver.
+        xmap if <Plug>(coc-funcobj-i)
+        xmap af <Plug>(coc-funcobj-a)
+        omap if <Plug>(coc-funcobj-i)
+        omap af <Plug>(coc-funcobj-a)
+
+        " Use `:Format` to format current buffer
+        command! -nargs=0 Format :call CocAction('format')
+
+        " Use `:Fold` to fold current buffer
+        command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+
+        " Use `:OR` for organize import of current buffer
+        command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+
+        " Add status line support, for integration with other plugin, checkout `:h coc-status`
+        set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
     """ }}}
     """ CtrlP {{{
         " Don't recalculate files on start (slow)
@@ -461,44 +554,11 @@ call plug#end()
         " Used in lightline.vim
         let g:tagbar_status_func = 'TagbarStatusFunc'
     """ }}}
-    """ Syntastic {{{
-        " Automatic checking for active, only when :SyntasticCheck for passive
-        " NOTE: override these in $HOME/.vimrc.last as needed!
-        let g:syntastic_mode_map = {
-            \ 'mode': 'passive',
-            \ 'active_filetypes':
-                \ ['c', 'cpp', 'perl', 'python', 'javascript', 'json', 'html', 'haskell', 'R', 'hs', 'rs'] }
-
-        " Skip check on :wq, :x, :ZZ etc
-        let g:syntastic_check_on_wq = 0
     """ }}}
     """ Netrw {{{
         let g:netrw_banner = 0
         let g:netrw_list_hide = '^\.$'
         let g:netrw_liststyle = 3
-    """ }}}
-    """ Supertab {{{
-        " Complete based on context (compl-omni, compl-filename, ..)
-        let g:SuperTabDefaultCompletionType = "context"
-
-        " Longest common match, e.g. 'b<tab>' => 'bar' for 'barbar', 'barfoo'
-        let g:SuperTabLongestEnhanced = 1
-        let g:SuperTabLongestHighlight = 0
-    """ }}}
-    """ SnipMate {{{
-        " Disable '.' => 'self' Python snippet
-        " Breaks SuperTab with omnicomplete (e.g. module.<Tab>)
-        function! DisablePythonSelfSnippet()
-            let l:pysnip = $HOME."/.vim/after/snippets/python.snippets"
-            if !filereadable(l:pysnip)
-                call system("echo 'snippet!! .' > " . l:pysnip)
-            endif
-        endfunction
-
-        augroup DisablePythonSelfSnippet
-            autocmd!
-            autocmd BufNewFile,BufRead *.py :call DisablePythonSelfSnippet()
-        augroup END
     """ }}}
     """ Automatically remove preview window after autocomplete {{{
     """ (mainly for clang_complete)
@@ -508,39 +568,53 @@ call plug#end()
             autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
         augroup END
     """ }}}
+    """ Vim Hexokinase {{{
+    " Vim Hexokinase
+        let g:Hexokinase_optInPatterns = [
+        \     'full_hex',
+        \     'triple_hex',
+        \     'rgb',
+        \     'rgba',
+        \     'hsl',
+        \     'hsla',
+        \     'colour_names'
+        \ ]
+        let g:Hexokinase_highlighters = ['backgroundfull']
+        " Reenable hexokinase on enter
+        autocmd VimEnter * HexokinaseTurnOn
+    """ }}}
     """ Lightline {{{
+    function! CocCurrentFunction()
+        return get(b:, 'coc_current_function', '')
+    endfunction
         let g:lightline = {
             \ 'colorscheme': 'wal',
             \ 'active': {
             \     'left': [
             \         ['mode', 'paste'],
-            \         ['readonly', 'fugitive'],
+            \         ['cocstatus', 'currentfunction', 'readonly', 'fugitive'],
             \         ['ctrlpmark', 'bufferline']
             \     ],
             \     'right': [
             \         ['lineinfo'],
             \         ['percent'],
-            \         ['fileformat', 'fileencoding', 'filetype', 'syntastic']
+            \         ['fileformat', 'fileencoding', 'filetype']
             \     ]
             \ },
             \ 'component': {
             \     'paste': '%{&paste?"!":""}'
             \ },
             \ 'component_function': {
-            \     'mode'         : 'MyMode',
-            \     'fugitive'     : 'MyFugitive',
-            \     'readonly'     : 'MyReadonly',
-            \     'ctrlpmark'    : 'CtrlPMark',
-            \     'bufferline'   : 'MyBufferline',
-            \     'fileformat'   : 'MyFileformat',
-            \     'fileencoding' : 'MyFileencoding',
-            \     'filetype'     : 'MyFiletype'
-            \ },
-            \ 'component_expand': {
-            \     'syntastic': 'SyntasticStatuslineFlag',
-            \ },
-            \ 'component_type': {
-            \     'syntastic': 'middle',
+            \     'mode'            : 'MyMode',
+            \     'fugitive'        : 'MyFugitive',
+            \     'readonly'        : 'MyReadonly',
+            \     'ctrlpmark'       : 'CtrlPMark',
+            \     'bufferline'      : 'MyBufferline',
+            \     'fileformat'      : 'MyFileformat',
+            \     'fileencoding'    : 'MyFileencoding',
+            \     'filetype'        : 'MyFiletype',
+            \     'cocstatus'       : 'coc#status', 
+            \     'currentfunction' : 'CocCurrentFunction'
             \ },
             \ 'subseparator': {
             \     'left': '|', 'right': '|'
@@ -648,17 +722,6 @@ call plug#end()
             return lightline#statusline(0)
         endfunction
 
-        function! s:syntastic()
-            SyntasticCheck
-            call lightline#update()
-        endfunction
-
-        augroup AutoSyntastic
-            autocmd!
-            execute "autocmd FileType " .
-                \join(g:syntastic_mode_map["active_filetypes"], ",") .
-                \" autocmd BufWritePost <buffer> :call s:syntastic()"
-        augroup END
     """ }}}
 """ }}}
 """ Local ending config, will overwrite anything above. Generally use this. {{{
