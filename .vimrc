@@ -10,7 +10,7 @@ filetype plugin indent on
 syntax on
 
 " .pl -> Prolog instead of Perl file
-au FileType perl set filetype=prolog
+" au FileType perl set filetype=prolog
 
 " Centralize backup, swap and undo directories  "
 set backupdir=~/.vim/backup//
@@ -76,6 +76,11 @@ Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symli
 " Plug 'vim-latex/vim-latex'
 Plug 'lervag/vimtex'
 
+" Pandoc
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-rmarkdown'
+
 " Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim'
 
@@ -97,18 +102,8 @@ Plug 'igordejanovic/textx.vim'
 " Rust support
 " Plug 'racer-rust/vim-racer'
 
-" Deoplete – Code Completion Engine *only on nvim!
-" if has('nvim')
-"  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-"  Plug 'zchee/deoplete-clang'
-"  Plug 'deoplete-plugins/deoplete-jedi'
-"else
-"  Plug 'Shougo/deoplete.nvim'
-"  Plug 'roxma/nvim-yarp'
-"  Plug 'roxma/vim-hug-neovim-rpc'
-"endif
-"let g:deoplete#enable_at_startup = 1
+" RON syntax highlighting
+Plug 'ron-rs/ron.vim'
 
 " Code completion "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -122,6 +117,10 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'jacoborus/tender.vim'
 Plug 'chriskempson/base16-vim'
+Plug 'noahfrederick/vim-hemisu'
+Plug 'chriskempson/tomorrow-theme'
+Plug 'phanviet/vim-monokai-pro'
+
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -134,7 +133,8 @@ call plug#end()
 """ User interface {{{
     """ Syntax highlighting {{{
         " set termguicolors -- to make hexokinase work
-        colorscheme jellybeans                 " colorscheme from plugin
+        set background=dark
+        colorscheme wal                 " colorscheme from plugin
         """ Force behavior and filetypes, and by extension highlighting {{{
             augroup FileTypeRules
                 autocmd!
@@ -149,14 +149,14 @@ call plug#end()
                 highlight LineNr ctermbg=NONE
                 highlight SignColumn ctermbg=NONE
                 highlight SignColumn guibg=NONE         "#151515
-         "       highlight CursorLine ctermbg=NONE       "235
+                highlight CursorLine ctermbg=7       "235
            endfunction
 
             call CustomHighlighting()
         """ }}}
     """ }}}
     """ Interface general {{{
-        set cursorline                              " hilight cursor line
+        "set cursorline                              " hilight cursor line
         set more                                    " ---more--- like less
         set number                                  " line numbers
         set scrolloff=3                             " lines above/below cursor
@@ -181,7 +181,7 @@ call plug#end()
     set noexrc                                      " don't use other .*rc(s)
     set nostartofline                               " keep cursor column pos
     set nowrap                                      " don't wrap lines
-    set numberwidth=5                               " 99999 lines
+    set numberwidth=4                               " 99999 lines
     set shortmess+=I                                " disable startup message
     set splitbelow                                  " splits go below w/focus
     set splitright                                  " vsplits go right w/focus
@@ -315,11 +315,7 @@ call plug#end()
         vmap <C-down> ]egv
 
         " NERDTree toggle
-        nmap <C-n> :NERDTreeToggle<CR>
-
-        " Deoplete suggestion select to ctrl-j and ctrl-k
-        inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-        inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+        nmap <C-f> :NERDTreeToggle<CR>
 
         " Scroll up/down lines from 'scroll' option, default half a screen
         map <C-j> <C-d>
@@ -435,6 +431,7 @@ call plug#end()
         \ 'coc-texlab',
         \ 'coc-rls',
         \ 'coc-python',
+        \ 'coc-clangd',
         \ ]
 
         " From Coc Readme

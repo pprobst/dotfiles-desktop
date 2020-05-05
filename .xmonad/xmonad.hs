@@ -87,7 +87,7 @@ myAreaScreenshot = "maims"
 myFileManager = "vifmrun"
 
 -- Program launcher
-myLauncher = "dmenu_run -i -b -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -dim 0.4 -p '>' -q -h 25"
+myLauncher = "dmenu_run -i -b -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -p '>'"
 
 -- xmobar location
 myXmobarrc = "~/.xmonad/xmobar.hs"
@@ -191,6 +191,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Fortune cookie
   , ((modMask, xK_z), 
      spawn "getFortune")
+
+  -- Emoji!
+  , ((modMask, xK_e), 
+     spawn "dmenuunicode")
 
   -- Calendar (current month)
   , ((modMask, xK_c), 

@@ -1,4 +1,4 @@
-source (navi widget fish)
+#source (navi widget fish)
 
 # Start X at login
 if status is-interactive
