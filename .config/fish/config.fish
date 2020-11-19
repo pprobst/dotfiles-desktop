@@ -6,3 +6,5 @@ if status is-interactive
         exec startx -- -keeptty
     end
 end
+
+cat ~/.cache/wal/sequences &

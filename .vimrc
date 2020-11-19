@@ -111,8 +111,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Sublime-style multiple selection "
 Plug 'terryma/vim-multiple-cursors'
 
+" Git support
+Plug 'tpope/vim-fugitive'
+
 " THEMES "
-Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'dylanaraps/wal.vim'
 Plug 'jacoborus/tender.vim'
@@ -132,9 +134,9 @@ call plug#end()
 """ }}}
 """ User interface {{{
     """ Syntax highlighting {{{
-        " set termguicolors -- to make hexokinase work
+        set termguicolors " to make hexokinase work
         set background=dark
-        colorscheme wal                 " colorscheme from plugin
+        colorscheme base16-tomorrow-night                " colorscheme from plugin
         """ Force behavior and filetypes, and by extension highlighting {{{
             augroup FileTypeRules
                 autocmd!
@@ -156,7 +158,7 @@ call plug#end()
         """ }}}
     """ }}}
     """ Interface general {{{
-        "set cursorline                              " hilight cursor line
+        set cursorline                              " hilight cursor line
         set more                                    " ---more--- like less
         set number                                  " line numbers
         set scrolloff=3                             " lines above/below cursor
@@ -288,6 +290,7 @@ call plug#end()
 """ }}}
 """ LaTeX {{{
         let g:vimtex_view_method='zathura'
+        let g:tex_flavor = 'latex'
 """}}}
 """ Keybindings {{{
     """ General {{{
@@ -330,6 +333,9 @@ call plug#end()
         nnoremap gN :bprevious<CR>
         nnoremap gd :bdelete<CR>
         nnoremap gf <C-^>
+
+        " Use lf to select and open files in vim.
+        nnoremap <leader>f :LF<cr>
 
         " Highlight last inserted text
         nnoremap gV '[V']
@@ -495,8 +501,8 @@ call plug#end()
         nmap <rn> <Plug>(coc-rename)
 
         " Remap for format selected region
-        xmap <leader>f  <Plug>(coc-format-selected)
-        nmap <leader>f  <Plug>(coc-format-selected)
+        xmap <leader>p  <Plug>(coc-format-selected)
+        nmap <leader>p  <Plug>(coc-format-selected)
 
         augroup mygroup
         autocmd!
@@ -718,6 +724,27 @@ call plug#end()
             let g:lightline.fname = a:fname
             return lightline#statusline(0)
         endfunction
+
+        function! LF()
+            let temp = tempname()
+            exec 'silent !lf -selection-path=' . shellescape(temp)
+            if !filereadable(temp)
+                redraw!
+                return
+            endif
+            let names = readfile(temp)
+            if empty(names)
+                redraw!
+                return
+            endif
+            exec 'edit ' . fnameescape(names[0])
+            for name in names[1:]
+                exec 'argadd ' . fnameescape(name)
+            endfor
+            redraw!
+        endfunction
+
+        command! -bar LF call LF()
 
     """ }}}
 """ }}}

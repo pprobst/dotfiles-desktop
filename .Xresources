@@ -2,8 +2,8 @@
 st.alpha: 1
 
 ! Border
-st.borderpx: 10
+st.borderpx: 8
 
 ! Font
-st.font: Iosevka:style=Regular:pixelsize=15:antialias=true:autohint=true,M+ 1p:style=regular:pixelsize=15:antialias=true:autohint=true
-st.boldFont: Iosevka:style=Bold:pixelsize=15:antialias=true:autohint=true,M+ 1p:style=bold:pixelsize=15:antialias=true:autohint=true
+st.font: Iosevka:style=Regular:pixelsize=16:antialias=true,M+ 1p:style=regular:pixelsize=16:antialias=true
+st.boldFont: Iosevka:style=Bold:pixelsize=16:antialias=true,M+ 1p:style=bold:pixelsize=16:antialias=true

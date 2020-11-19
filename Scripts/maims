@@ -2,4 +2,4 @@
 
 # Screenshot selected area
 maim --hidecursor -s ~/Images/Screenshots/"Screenshot $(date +"%Y-%m-%d") at $(date +"%H.%M".%S)".png
-notify-send -t 3000 "*SNAP*" -i "/home/probst/Images/Imageboards/2D/*snap*.jpg"
+notify-send -t 3000 "📷 *SNAP*" -i "/home/probst/Images/Imageboards/2D/*snap*.jpg"

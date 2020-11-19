@@ -8,6 +8,8 @@ export PATH="$HOME/Scripts/colorscripts:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH="$HOME/Documents/Prog/Go"
 export PATH="$PATH:/usr/bin/go:$GOPATH/bin"
+export PATH="$HOME/Software/IntelliJ/bin:$PATH"
+export PATH="$HOME/Software/Discord:$PATH"
 
 # If not running interactively, don't do anything
 export VISUAL=nvim
@@ -18,19 +20,6 @@ export BROWSER=firefox-developer-edition
 
 # Environment setting for wine programs
 FREETYPE_PROPERTIES="truetype:interpreter-version=35"
-
-# Reset
-Color_Off='\e[0m'       # Text Reset
-
-# Regular Colors
-Black='\e[0;30m'        # Black
-Red='\e[0;31m'          # Red
-Green='\e[0;32m'        # Green
-Yellow='\e[0;33m'       # Yellow
-Blue='\e[0;34m'         # Blue
-Purple='\e[0;35m'       # Purple
-Cyan='\e[0;36m'         # Cyan
-White='\e[0;37m'        # White
 
 alias ls='ls --color=auto'
 #PS1='[\u@\h \W]\$ ' # default

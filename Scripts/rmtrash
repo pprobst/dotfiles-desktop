@@ -2,3 +2,4 @@
 
 rm -rf ~/.local/share/vifm/Trash/*
 rm -rf ~/.local/share/Trash/files/*
+rm -rf ~/.trash/*

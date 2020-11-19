@@ -21,7 +21,7 @@
     separator_height = 2
     padding = 8
     horizontal_padding = 8
-    separator_color = "#262829"
+    separator_color = "#141414"
     startup_notification = false
     show_icons = yes
     icon_position = left
@@ -29,7 +29,7 @@
 
 [frame]
     width = 2
-    color = "#262829"
+    color = "#9C4A4F"
 
 [shortcuts]
     close = ctrl+space
@@ -38,21 +38,21 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#18191A"
+    background = "#0F0F0F"
 	foreground = "#C2C5C6"
     #background = "#767C6F"
     #foreground = "#1D1910"
     timeout = 5
 
 [urgency_normal]
-    background = "#18191A"
+    background = "#0F0F0F"
     foreground = "#C2C5C6"
     #background = "#767C6F"
     #foreground = "#1D1910"
     timeout = 10
 
 [urgency_critical]
-    background = "#18191A"
+    background = "#0F0F0F"
     foreground = "#C2C5C6"
     #background = "#767C6F"
     #foreground = "#1D1910"

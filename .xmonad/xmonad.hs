@@ -26,6 +26,7 @@ import XMonad.Layout.MultiColumns (multiCol)
 import XMonad.Layout.Spiral
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.SimplestFloat
+import XMonad.Layout.Circle
 
 -- Layout modifiers
 import XMonad.Layout.NoBorders
@@ -36,6 +37,7 @@ import XMonad.Layout.Spacing
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Util.SpawnOnce
+import XMonad.Util.NamedScratchpad
 
 -- Actions
 import XMonad.Actions.Promote
@@ -55,14 +57,14 @@ import Data.Tree
 
 -- Colors and borders
 --
-myNormalBorderColor  = "#262829"
-myFocusedBorderColor = "#2E536F"
+myNormalBorderColor  = "#171717"
+myFocusedBorderColor = "#3B6585"
 
 -- Window title color
-xmobarTitleColor = "#9A758E"
+xmobarTitleColor = "#9C4A4F"
 
 -- Current workspace color
-xmobarCurrentWorkspaceColor = "#6D9AC5"
+xmobarCurrentWorkspaceColor = "#5083A9"
 
 -- Window border width
 myBorderWidth = 2
@@ -72,7 +74,8 @@ myBorderWidth = 2
 -- Basics
 --
 -- Terminal
-myTerminal = "st"
+--myTerminal = "st"
+myTerminal = "alacritty"
 
 -- Lock screen
 myScreensaver = "lock"
@@ -84,10 +87,10 @@ myScreenshot = "maimn"
 myAreaScreenshot = "maims"
 
 -- File manager
-myFileManager = "vifmrun"
+myFileManager = "lfrun"
 
 -- Program launcher
-myLauncher = "dmenu_run -i -b -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#18191A' -nf '#6D9AC5' -sb '#3B6585' -sf '#242223' -p '>'"
+myLauncher = "dmenu_run -i -b -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#0F0F0F' -nf '#5083A9' -sb '#3B6585' -sf '#0F0F0F' -p '>'"
 
 -- xmobar location
 myXmobarrc = "~/.xmonad/xmobar.hs"
@@ -121,6 +124,10 @@ myWorkspaces = [ Node "Browser" [] -- a workspace for your browser
 -}
 
 ------------------------------------------------------------------------
+-- Scratchpads
+-- scratchpads :: [NamedScratchpad]
+-- TODO
+
 
 -- Window rules
 --
@@ -135,6 +142,9 @@ myManageHook = composeAll
     , resource  =? "pqiv"                           --> doCenterFloat
     , className =? "Pavucontrol"                    --> doCenterFloat
     , className =? "File-roller"                    --> doCenterFloat
+    , className =? "sun-awt-X11-XFramePeer"         --> doCenterFloat
+    , className =? "tcc-ufsm-2020"                  --> doCenterFloat
+    , className =? "rexpaint.exe"                   --> doCenterFloat
     , className =? "kanjitomo-reader-Launcher"      --> doFloat
     , className =? "mpv"                            --> doCenterFloat
     , className =? "Navigator"                      --> doFullFloat
@@ -152,11 +162,17 @@ myManageHook = composeAll
     , className =? "ia"                             --> doFullFloat
     , className =? "t-engine"                       --> doFullFloat
     , className =? "cataclysm-tiles"                --> doFullFloat
+    , className =? "factorio"                       --> doFullFloat
     , className =? "SkullGirls.x86_64-pc-linux-gnu" --> doCenterFloat
-    , title     =? "WazHack"                        --> doFullFloat
-    , title     =? "TheSilverCase"                  --> doCenterFloat
-    , className =? "CoQ.x86_64"                     --> doCenterFloat
+    , className =? "Terraria.bin.x86_64"            --> doCenterFloat
+    , className =? "katana zero.exe"                --> doFullFloat
+    , className =? "CoQ.x86_64"                     --> doFullFloat
     , className =? "adl"                            --> doCenterFloat
+    , title     =? "The Carribean Sail"             --> doCenterFloat
+    , title     =? "WazHack"                        --> doFullFloat
+    , title     =? "Catacomb Kids"                  --> doFullFloat
+    , title     =? "TheSilverCase"                  --> doCenterFloat
+    , title     =? "(Fiji Is Just) ImageJ"          --> doCenterFloat
     , isDialog                                      --> doCenterFloat
     , isFullscreen                                  --> (doF W.focusDown <+> doFullFloat)]
 
@@ -164,7 +180,7 @@ myManageHook = composeAll
 
 -- Layouts
 --
--- Gaps between windows 4 faggots: (mySpacing (layout config)) |||...
+-- Gaps between windows: (mySpacing (layout config)) |||...
 -- mySpacing = spacingRaw True (Border 2 2 2 2) True (Border 2 2 2 2) True
 
 myLayout = avoidStruts (
@@ -173,6 +189,7 @@ myLayout = avoidStruts (
     Grid |||
     multiCol [1] 1 0.01 (-0.5) |||
     spiral (6/7) |||
+    Circle |||
     simplestFloat |||
     Full)
 
@@ -222,7 +239,8 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
 
   -- Spawn file manager
   , ((modMask, xK_f), 
-     spawn (myTerminal ++ " -e " ++ myFileManager))
+     --spawn (myTerminal ++ " -e " ++ myFileManager))
+     spawn ("st" ++ " -e " ++ myFileManager))
 
   -- Mute vol
   , ((modMask .|. controlMask, xK_m),
@@ -422,8 +440,7 @@ myFocusFollowsMouse = True
 myStartupHook = do
             spawnOnce "feh --bg-fill /home/probst/Images/Wallpapers/current-desktop.png"
             --spawnOnce "feh --bg-tile /home/probst/Images/Wallpapers/current-desktop.png"
-            spawnOnce "transmission-gtk -m"
-            --setWMName "LG3D" to make java programs work (lol)
+            setWMName "LG3D"  -- to make java programs work (lol)
 
 ------------------------------------------------------------------------
 
