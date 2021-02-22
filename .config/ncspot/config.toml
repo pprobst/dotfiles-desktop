@@ -1,0 +1,21 @@
+notify = true
+album_column = true
+bitrate = 320
+
+[theme]
+background = "#0F0F0F"
+primary = "#C2C5C6"
+secondary = "#C2C5C6"
+title = "#3B6585"
+playing = "#CC6666"
+playing_selected = "#3B6585"
+playing_bg = "#0F0F0F"
+highlight = "#6A8F9B"
+highlight_bg = "#1C1C1C"
+error = "#C2C5C6"
+error_bg = "#C62828"
+statusbar = "#1A1A1A"
+statusbar_progress = "#CC6666"
+statusbar_bg = "#3B6585"
+cmdline = "#C2C5C6"
+cmdline_bg = "#0F0F0F"

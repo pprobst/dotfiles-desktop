@@ -1,0 +1,9 @@
+#!/bin/sh
+
+maim -s | cat | tesseract -l jpn_vert --dpi 300 stdin stdout | sed 's/ //g' | xclip -i -sel c
+
+if [ "$(xclip -o -sel c)" ]; then
+    notify-send "Copied OCR text to the clipboard."
+else
+    notify-send "No text detected."
+fi

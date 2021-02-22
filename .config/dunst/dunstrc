@@ -1,5 +1,5 @@
 [global]
-    font = Iosevka, M+ 1p
+    font = Iosevka, M+ 1mn
     allow_markup = yes
     format = "%s\n%b"
     sort = yes
@@ -29,7 +29,7 @@
 
 [frame]
     width = 2
-    color = "#9C4A4F"
+    color = "#CC6666"
 
 [shortcuts]
     close = ctrl+space

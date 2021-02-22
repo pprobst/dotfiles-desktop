@@ -16,7 +16,7 @@ elif [[ $temp -ge 5000 ]]; then
     #echo "%{F#8FA1B3}$icon"       # Blue
     echo "<fc=#988B94>$icon</fc>"
 elif [[ $temp -ge 3800 ]]; then
-    echo "<fc=#906163>$icon</fc>"       # Orange
+    echo "<fc=#9D5345>$icon</fc>"       # Orange
 else
-    echo "<fc=#AB4247>$icon</fc>"       # Red
+    echo "<fc=#BB3030>$icon</fc>"       # Red
 fi

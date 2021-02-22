@@ -15,4 +15,4 @@ mpc pause >/dev/null 2>&1
 i3lock -e -f -c 000000 -i ~/.tmp/locked.png
 
 # Turn off display after 10s.
-sleep 10 && pgrep i3lock && xset dpms force off
+# sleep 10 && pgrep i3lock && xset dpms force off

@@ -12,6 +12,7 @@ cp ~/.xmonad/xmonad.hs /home/probst/Repos/dotfiles-desktop/.xmonad
 cp ~/.xmonad/xmobar.hs /home/probst/Repos/dotfiles-desktop/.xmonad
 cp ~/.xmonad/how-to-install.txt /home/probst/Repos/dotfiles-desktop/.xmonad
 cp ~/.pqivrc /home/probst/Repos/dotfiles-desktop
+cp -r ~/.config/alacritty /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/picom /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/dunst /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/htop /home/probst/Repos/dotfiles-desktop/.config
@@ -26,3 +27,4 @@ cp -r ~/.config/fish /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/nvim /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.config/lf /home/probst/Repos/dotfiles-desktop/.config
 cp -r ~/.fonts/ /home/probst/Repos/dotfiles-desktop/
+cp -r ~/.config/ncspot/config.toml /home/probst/Repos/dotfiles-desktop/.config/ncspot

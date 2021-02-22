@@ -34,7 +34,7 @@ import XMonad.Layout.WindowArranger (windowArrange, WindowArrangerMsg(..))
 import XMonad.Layout.Spacing
 
 -- Utils
-import XMonad.Util.Run (spawnPipe)
+import XMonad.Util.Run (spawnPipe, spawnPipeWithUtf8Encoding, spawnPipeWithNoEncoding)
 import XMonad.Util.EZConfig (additionalKeys)
 import XMonad.Util.SpawnOnce
 import XMonad.Util.NamedScratchpad
@@ -61,7 +61,7 @@ myNormalBorderColor  = "#171717"
 myFocusedBorderColor = "#3B6585"
 
 -- Window title color
-xmobarTitleColor = "#9C4A4F"
+xmobarTitleColor = "#CC6666"
 
 -- Current workspace color
 xmobarCurrentWorkspaceColor = "#5083A9"
@@ -97,16 +97,7 @@ myXmobarrc = "~/.xmonad/xmobar.hs"
 
 -- Workspaces
 --
-xmobarEscape = concatMap doubleLts
-    where
-        doubleLts '<' = "<<"
-        doubleLts x   = [x]
-
-myWorkspaces = clickable . (map xmobarEscape) $ [" 一"," 二"," 三"," 四"," 五"," 六"]
-
-  where clickable l = ["<action=xdotool key super+" ++ show (n) ++ ">" ++ ws ++ "</action>" | 
-                      (i,ws) <- zip [1..] l, 
-                      let n = i]
+myWorkspaces = [" 1", " 2", " 3", " 4", " 5", " 6"] ++ map show [7..9]
 
 {- myWorkspaces :: Forest String
 myWorkspaces = [ Node "Browser" [] -- a workspace for your browser
@@ -165,10 +156,14 @@ myManageHook = composeAll
     , className =? "factorio"                       --> doFullFloat
     , className =? "SkullGirls.x86_64-pc-linux-gnu" --> doCenterFloat
     , className =? "Terraria.bin.x86_64"            --> doCenterFloat
+    , className =? "riftwizard.exe"                 --> doCenterFloat
     , className =? "katana zero.exe"                --> doFullFloat
     , className =? "CoQ.x86_64"                     --> doFullFloat
     , className =? "adl"                            --> doCenterFloat
     , title     =? "The Carribean Sail"             --> doCenterFloat
+    , title     =? "Underrail"                      --> doFullFloat
+    , title     =? "Disco Elysium"                      --> doFullFloat
+    , title     =? "Darkwood"                       --> doFullFloat
     , title     =? "WazHack"                        --> doFullFloat
     , title     =? "Catacomb Kids"                  --> doFullFloat
     , title     =? "TheSilverCase"                  --> doCenterFloat
@@ -236,6 +231,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Area screenshot
   , ((modMask, xK_Print), 
      spawn myAreaScreenshot)
+
+  -- OCR screenshot
+  , ((modMask .|. shiftMask, xK_Print), 
+     spawn "ocr-clipboard")
 
   -- Spawn file manager
   , ((modMask, xK_f), 
@@ -447,7 +446,7 @@ myStartupHook = do
 -- Run xmonad
 --
 main = do
-  xmproc <- spawnPipe ("xmobar " ++ myXmobarrc)
+  xmproc <- spawnPipeWithNoEncoding ("xmobar " ++ myXmobarrc)
   xmonad $ ewmh defaults {
       logHook = dynamicLogWithPP $ xmobarPP {
             ppOutput = hPutStrLn xmproc

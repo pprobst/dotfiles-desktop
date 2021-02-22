@@ -8,3 +8,5 @@ if status is-interactive
 end
 
 cat ~/.cache/wal/sequences &
+
+starship init fish | source

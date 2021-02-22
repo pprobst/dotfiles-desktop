@@ -1,0 +1,16 @@
+convert: profile 'icc': 'desc': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'wtpt': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'bkpt': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'rXYZ': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'gXYZ': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'bXYZ': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'dmnd': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'dmdd': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'vued': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'view': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'lumi': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'meas': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'tech': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'rTRC': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'gTRC': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 'bTRC': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.

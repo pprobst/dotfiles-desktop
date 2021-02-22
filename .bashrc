@@ -10,6 +10,7 @@ export GOPATH="$HOME/Documents/Prog/Go"
 export PATH="$PATH:/usr/bin/go:$GOPATH/bin"
 export PATH="$HOME/Software/IntelliJ/bin:$PATH"
 export PATH="$HOME/Software/Discord:$PATH"
+export TESSDATA_PREFIX="$HOME/.config/tessdata"
 
 # If not running interactively, don't do anything
 export VISUAL=nvim
