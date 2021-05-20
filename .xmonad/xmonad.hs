@@ -61,7 +61,7 @@ myNormalBorderColor  = "#171717"
 myFocusedBorderColor = "#3B6585"
 
 -- Window title color
-xmobarTitleColor = "#CC6666"
+xmobarTitleColor = "#6A9B88"
 
 -- Current workspace color
 xmobarCurrentWorkspaceColor = "#5083A9"
@@ -90,7 +90,7 @@ myAreaScreenshot = "maims"
 myFileManager = "lfrun"
 
 -- Program launcher
-myLauncher = "dmenu_run -i -b -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#0F0F0F' -nf '#5083A9' -sb '#3B6585' -sf '#0F0F0F' -p '>'"
+myLauncher = "dmenur"
 
 -- xmobar location
 myXmobarrc = "~/.xmonad/xmobar.hs"
@@ -162,7 +162,8 @@ myManageHook = composeAll
     , className =? "adl"                            --> doCenterFloat
     , title     =? "The Carribean Sail"             --> doCenterFloat
     , title     =? "Underrail"                      --> doFullFloat
-    , title     =? "Disco Elysium"                      --> doFullFloat
+    , title     =? "Disco Elysium"                  --> doFullFloat
+    , title     =? "Shadow Tactics Blades of the Shogun" --> doFullFloat
     , title     =? "Darkwood"                       --> doFullFloat
     , title     =? "WazHack"                        --> doFullFloat
     , title     =? "Catacomb Kids"                  --> doFullFloat
@@ -204,8 +205,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   , ((modMask, xK_z), 
      spawn "getFortune")
 
-  -- Emoji!
+  -- Emacs
   , ((modMask, xK_e), 
+     spawn "emacs")
+
+  -- Emoji!
+  , ((modMask, xK_r), 
      spawn "dmenuunicode")
 
   -- Calendar (current month)
@@ -223,6 +228,10 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   -- Spawn launcher
   , ((modMask, xK_d),
      spawn myLauncher)
+
+  -- Lock screen
+  , ((modMask, xK_p),
+     spawn "pass_menu")
 
   -- Full screen screenshot
   , ((0, xK_Print),

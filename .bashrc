@@ -11,6 +11,14 @@ export PATH="$PATH:/usr/bin/go:$GOPATH/bin"
 export PATH="$HOME/Software/IntelliJ/bin:$PATH"
 export PATH="$HOME/Software/Discord:$PATH"
 export TESSDATA_PREFIX="$HOME/.config/tessdata"
+export WINEPREFIX="$HOME/.wine"
+export STEAM_COMPAT_DATA_PATH="$HOME/.proton"
+export WORKON_HOME=$HOME/.virtualenvs
+source $HOME/.local/bin/virtualenvwrapper.sh
+
+export WORKON_HOME=$HOME/.virtualenvs
+source $HOME/.local/bin/virtualenvwrapper.sh
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
 # If not running interactively, don't do anything
 export VISUAL=nvim

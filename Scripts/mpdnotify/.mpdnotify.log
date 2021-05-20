@@ -14,3 +14,12 @@ convert: profile 'icc': 'tech': ICC profile tag start not a multiple of 4 `/tmp/
 convert: profile 'icc': 'rTRC': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
 convert: profile 'icc': 'gTRC': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
 convert: profile 'icc': 'bTRC': ICC profile tag start not a multiple of 4 `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.
+convert: profile 'icc': 1000000h: invalid rendering intent `/tmp/mpdnotify_cover.png' @ warning/png.c/MagickPNGWarningHandler/1748.

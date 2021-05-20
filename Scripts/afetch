@@ -1,0 +1,79 @@
+#!/usr/bin/env sh
+#
+# by mhess
+
+distro="$(sed -rn '/^NAME/ s/^NAME="?([a-z A-Z]+).?$/\1/p' /etc/os-release)"
+kernel="$(uname -r)"
+shell="$(basename $SHELL)"
+
+get_ppid="$(sed -rn 's/^PPid:\s+([[:digit:]]+)/\1/p' "/proc/${PPID}/status")"
+get_term="$(cat "/proc/${get_ppid}/comm")"
+
+term() {
+case "$get_term" in
+	login|Login|init\(init\))
+		printf "$(tty)"
+		;;
+	*) printf "${get_term}" ;;
+esac
+}
+
+packages() {
+PACK=$(type apt xbps-query emerge pacman nix-env rpm apk cave gaze 2>/dev/null | grep '\/')
+PACK="${PACK##*/}"
+case ${PACK} in
+	apt)        dpkg -l | wc -l ;;
+	xbps-query) xbps-query -l | wc -l ;;
+	emerge)     ls -d /var/db/pkg/*/* | wc -l ;;
+	pacman)     pacman -Q | wc -l ;;
+	nix-env)    ls -d -1 /nix/store/ | wc -l ;;
+	rpm)        rpm -qa | wc -l ;;
+	apk)        apk info | wc -l ;;
+esac
+}
+
+wm() {
+if [ ! -z "$DISPLAY" ]; then
+	# check if xprop is installed
+	if type xprop 1>/dev/null 2>&1; then
+		id="$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)"
+		id="${id##* }"
+		wm="$(xprop -id "$id" -notype -len 100 -f _NET_WM_NAME 8t)"
+		wm="$(printf '%s\n' "$wm" | sed -nr '/_NET_WM_NAME/ s/^.*"([a-zA-Z0-9 ()]+)"/\1/p')"
+		printf "$wm"
+	fi
+
+	window_manager="(i3 bspwm dwm xmonad windowchef openbox fluxbox spectrwm awesome dwm 2bwm herbstluftwm monsterwm fvwm)"
+	formated="$(printf "$window_manager" | sed 's/ /|/g')"
+
+	# if xprop is not installed or occur any errors, look for process
+	if [ -z "$wm" ]; then
+		ps -e | grep -v 'grep' | grep -m 1 -o -E "$formated" || printf 'none'
+	fi
+else
+	printf 'none'
+fi
+}
+
+# get random number for color
+rand="$(awk -v min=1 -v max=6 'BEGIN{srand(); print int(min+rand()*(max-min+1))}')"
+
+f1=$(printf '%b' "\33[3${rand}m")
+f2=$(printf '%b' "\33[37m")
+
+t=$(printf '%b' "\33[0m")
+
+[ "$1" = "-b" ] && b="" || b=$(printf '%b' "\33[1m")
+
+# start
+clear
+cat << EOF
+${b}${f1}       .---.
+${b}${f1}      /     \\       DISTRO:        ${t}${f2}${distro}
+${b}${f1}      \ @-@ /       KERNEL:        ${t}${f2}${kernel}
+${b}${f1}     /\` \\_/ \`\\      SHELL:         ${t}${f2}${shell}
+${b}${f1}    / /     \\ \\     PACKAGES:      ${t}${f2}$(packages)
+${b}${f1}    \ \     / /     WM:            ${t}${f2}$(wm)
+${b}${f1}   / \_>   <_/ \\    TERM:          ${t}${f2}$(term)
+${b}${f1}   \__/'---'\__/${t}
+EOF

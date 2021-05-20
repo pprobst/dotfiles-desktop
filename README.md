@@ -6,4 +6,5 @@ Config files for:
 * lf
 * mpv
 
-And many others.
+And many others. My Emacs configuration is
+[here](https://github.com/pprobst/yukimacs).

@@ -1,0 +1,3 @@
+#!/usr/bin/sh
+
+dmenu_run -i -b -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#0F0F0F' -nf '#5083A9' -sb '#3B6585' -sf '#0F0F0F' -p '>'

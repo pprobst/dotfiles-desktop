@@ -5,7 +5,7 @@
 # Must have xclip installed to even show menu.
 xclip -h 2>/dev/null || exit 1
 
-chosen=$(cut -d ';' -f1 ~/Scripts/emoji | dmenu -i -b -l 20 -fn 'Iosevka:pixelsize=13' -nb '#222222' -nf '#FAFAFA' -sb '#A672A3' -sf '#FAFAFA' -p '>' | sed "s/ .*//")
+chosen=$(cut -d ';' -f1 ~/Scripts/emoji | dmenu -i -b -l 20 -fn 'Iosevka:style=Regular:pixelsize=16' -nb '#0F0F0F' -nf '#5083A9' -sb '#3B6585' -sf '#0F0F0F' -p '>' | sed "s/ .*//")
 
 [ "$chosen" != "" ] || exit
 

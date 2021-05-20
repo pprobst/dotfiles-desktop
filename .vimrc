@@ -85,7 +85,7 @@ Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'junegunn/goyo.vim'
 
 " See colors in the file!
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'norcalli/nvim-colorizer.lua'
 
 " Markdown preview
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
@@ -105,6 +105,9 @@ Plug 'igordejanovic/textx.vim'
 " RON syntax highlighting
 Plug 'ron-rs/ron.vim'
 
+" PDDL syntax highlighting
+Plug 'PontusPersson/pddl.vim'
+
 " Code completion "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -114,6 +117,9 @@ Plug 'terryma/vim-multiple-cursors'
 " Git support
 Plug 'tpope/vim-fugitive'
 
+" Make the yanked region apparent!
+Plug 'machakann/vim-highlightedyank'
+
 " THEMES "
 Plug 'nanotech/jellybeans.vim'
 Plug 'dylanaraps/wal.vim'
@@ -122,7 +128,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'noahfrederick/vim-hemisu'
 Plug 'chriskempson/tomorrow-theme'
 Plug 'phanviet/vim-monokai-pro'
-
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -134,7 +139,7 @@ call plug#end()
 """ }}}
 """ User interface {{{
     """ Syntax highlighting {{{
-        set termguicolors " to make hexokinase work
+        set termguicolors " to make colorizer work
         set background=dark
         colorscheme base16-tomorrow-night                " colorscheme from plugin
         """ Force behavior and filetypes, and by extension highlighting {{{
@@ -171,6 +176,9 @@ call plug#end()
             " set fileencoding=utf-8                " default none
         """ }}}
     """ }}}
+""" }}}
+""" Colorizer config {{{
+lua require'colorizer'.setup()
 """ }}}
 """ General settings {{{
     set completeopt=menu,preview,longest            " insert mode completion
@@ -570,21 +578,6 @@ call plug#end()
             autocmd CursorMovedI * if pumvisible() == 0 | pclose | endif
             autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
         augroup END
-    """ }}}
-    """ Vim Hexokinase {{{
-    " Vim Hexokinase
-        let g:Hexokinase_optInPatterns = [
-        \     'full_hex',
-        \     'triple_hex',
-        \     'rgb',
-        \     'rgba',
-        \     'hsl',
-        \     'hsla',
-        \     'colour_names'
-        \ ]
-        let g:Hexokinase_highlighters = ['backgroundfull']
-        " Reenable hexokinase on enter
-        autocmd VimEnter * HexokinaseTurnOn
     """ }}}
     """ Lightline {{{
     function! CocCurrentFunction()
