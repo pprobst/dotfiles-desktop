@@ -1,0 +1,40 @@
+"-------------tech------------"
+https://www.archlinux.org/feeds/news/ tech arch linux
+https://hnrss.org/frontpage tech arch news
+#https://hnrss.org/newest?points=100 tech arch news
+https://www.manualdousuario.net/feed/ tech news
+https://www.reddit.com/r/linux/new.rss reddit linux "~Reddit: Linux"
+https://www.reddit.com/r/rust/new.rss reddit prog "~Reddit: The Rust Programming Language"
+https://www.reddit.com/r/godot/new.rss reddit prog gamedev "~Reddit: Godot, the open-source game engine"
+https://www.reddit.com/r/roguelikedev/new.rss reddit prog gamedev "~Reddit: Roguelike Development"
+https://www.reddit.com/r/gamedev/new.rss reddit prog gamedev "~Reddit: gamedev"
+https://www.reddit.com/r/proceduralgeneration/new.rss reddit prog procgen "~Reddit: Procedural Generation"
+
+"------------gaming-----------"
+https://www.siliconera.com/feed/ gaming news
+https://nitter.42l.fr/Nibellion/rss gaming news
+https://www.reddit.com/r/TraditionalRoguelikes/new.rss reddit gaming "~Reddit: TraditionalRoguelikes"
+
+"----------language-----------"
+https://www.reddit.com/r/LearnJapanese/new.rss japanese language reddit "~Reddit: Learn Japanese"
+
+"-------------blog------------"
+https://lukesmith.xyz/rss.xml blog
+https://geohot.github.io/blog/feed.xml blog "~George Hotz"
+https://hexdsl.co.uk/rss.xml blog "~HexDSL"
+https://friendo.monster/rss.xml blog
+https://annoying.technology/index.xml blog
+
+"-------------anime-----------"
+https://www.animenewsnetwork.com/views/atom.xml?ann-edition=w anime news "~Anime News Network"
+https://nyaa.si/?page=rss&u=Erai-raws anime "~Nyaa: Erai-raws"
+https://nyaa.si/?page=rss&u=subsplease anime "~Nyaa: SubsPlease"
+
+"-------------music-----------"
+https://www.homicidols.com/feed/ music "~Homicidols"
+
+"------------podcast----------"
+https://notrelated.libsyn.com/rss podcast
+
+"-------------video-----------"
+https://videos.lukesmith.xyz/feeds/videos.xml?sort=-publishedAt&filter=local video
